@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ title }}</title>
+  <meta name="description" content="{{ meta_description }}">
+  <!--    <script src="bootstrap/dist/js/bootstrap"></script>-->
+
+  <link rel="stylesheet" type="text/css" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/main.min.css">
+
+  <script defer src="assets/libs/jquery.js"></script>
+  <script defer src="assets/libs/jquery-ui.js"></script>
+  <script defer src="assets/libs/jquery-ui-touch.js"></script>
+  <script defer src="assets/libs/fancybox.umd.js"></script>
+  <script defer src="assets/libs/just-validate.production.min.js"></script>
+  <script defer src="assets/libs/accordion.js"></script>
+  <script defer src="assets/libs/aos.js"></script>
+  <script defer src="assets/libs/jquery.maskedinput.min.js"></script>
+  <script defer src="assets/libs/playerjs.js"></script>
+  <script defer src="assets/libs/swiper.js"></script>
+  <script defer src="assets/libs/slick.min.js"></script>
+  <script defer src="assets/libs/tippy-bundle.umd.js"></script>
+  <script defer src="assets/js/app.js"></script>
+
+
+
+</head>
+
+<body {% if bodyClass %} class="{{ bodyClass }} body" {% endif %} id="body">
+
+
+  {% include "html/includes/header.html" %}
+
+
+  <main>
+    <section class="gray">
+      <div class="container ">
+        {% include "html/includes/breadcrumbs.html" %}
+      </div>
+    </section>
+    {% block content %}{% endblock %}
+
+  </main>
+  {% include "html/includes/footer.html" %}
+
+
+<!-- 
+  <div class="btn-up btn-up__hide">
+    <img src="assets/img/btn-top.svg" alt="">
+  </div>
+
+
+  <button class="btn-call footer-call">
+    <img src="assets/img/btn-call.svg" alt="">
+  </button> -->
+
+
+</body>
+
+</html>

@@ -1,0 +1,641 @@
+{% set title = "Ссылки" %}
+{% set bodyClass = "link" %}
+
+{% extends "html/layouts/default.html" %}
+
+{% block content %}
+
+
+
+{% include "html/includes/banner.html" %}
+
+<article class="grey products">
+  <div class="container">
+    <div class="title__link-box">
+      <h2 class="title">Продукция</h2>
+      <a href="/products/" class="title__link">Перейти в каталог</a>
+    </div>
+
+
+    <ul class="list product__list">
+      <li class="item product__item">
+        {% set productTitle = "Проволока" %}
+        {% set imgLink = "../assets/img/product1.jpg" %}
+        {% set desc = "Каталог сплавов для производства проволоки с описанием и характеристиками
+        Это не анонс !!!!" %}
+        {% include "html/includes/product-card.html" %}
+      </li>
+      <li class="item product__item">
+        {% set productTitle = "Прут/Круг" %}
+        {% set imgLink = "../assets/img/product2.jpg" %}
+        {% set desc = "Сортовой прокат в соответствии с установленными стандартами" %}
+        {% include "html/includes/product-card.html" %}
+      </li>
+      <li class="item product__item">
+        {% set productTitle = "Слитки" %}
+        {% set imgLink = "../assets/img/product3.jpg" %}
+        {% set desc = "Сортовой прокат в соответствии с установленными стандартами" %}
+        {% include "html/includes/product-card.html" %}
+      </li>
+      <li class="item product__item">
+        {% set productTitle = "Полоса" %}
+        {% set imgLink = "../assets/img/product4.jpg" %}
+        {% set desc = "Сортовой прокат в соответствии с установленными стандартами" %}
+        {% include "html/includes/product-card.html" %}
+      </li>
+      <li class="item product__item">
+        {% set productTitle = "Лента/Фольга" %}
+        {% set imgLink = "../assets/img/product5.jpg" %}
+        {% set desc = "Сортовой прокат в соответствии с установленными стандартами" %}
+        {% include "html/includes/product-card.html" %}
+      </li>
+      <li class="item product__item">
+        {% set productTitle = "Трубы" %}
+        {% set imgLink = "../assets/img/product6.jpg" %}
+        {% set desc = "Сортовой прокат в соответствии с установленными стандартами" %}
+        {% include "html/includes/product-card.html" %}
+      </li>
+    </ul>
+
+
+    <!-- 
+    <div class="ctn_navigation_production">
+      <div class="content_prod">
+
+
+        <a class="card_production" href="/products/provoloka/">
+          <img class="pictures_img" src="/upload/iblock/8dd/7fjgp57hdt5f2d4oal8ahfdg0zgrpaor.jpg" alt="Проволока">
+          <div class="card_title">Проволока</div>
+          <div class="card-description">
+            <div class="card-description_title">Проволока</div>
+            <p class="text_description">Каталог сплавов для производства проволоки с описанием и характеристиками
+              Это не анонс !!!!</p>
+          </div>
+        </a>
+
+        <a class="card_production" href="/products/prut-krug/">
+          <img class="pictures_img" src="/upload/iblock/c7c/yw9f1qw8m5x4wutrej54jnlmec9vigd6.jpg" alt="Пруток / Круг">
+          <div class="card_title">Пруток / Круг</div>
+          <div class="card-description">
+            <div class="card-description_title">Пруток / Круг</div>
+            <p class="text_description">Сортовой прокат в соответствии с установленными стандартами</p>
+          </div>
+        </a>
+
+        <a class="card_production" href="/products/slitki/">
+          <img class="pictures_img" src="/upload/iblock/ba3/fr8fkrj3ddw5v6sbul9j3tuhtou6xygz.jpg" alt="Слитки">
+          <div class="card_title">Слитки</div>
+          <div class="card-description">
+            <div class="card-description_title">Слитки</div>
+            <p class="text_description">–</p>
+          </div>
+        </a>
+
+        <a class="card_production" href="/products/polosa/">
+          <img class="pictures_img" src="/upload/iblock/725/np5pvxuhnp6xfisdf28ey4t0b6xhz9vy.jpg" alt="Полоса">
+          <div class="card_title">Полоса</div>
+          <div class="card-description">
+            <div class="card-description_title">Полоса</div>
+            <p class="text_description">–</p>
+          </div>
+        </a>
+
+        <a class="card_production" href="/products/lenta-folga/">
+          <img class="pictures_img" src="/upload/iblock/d06/6j38wbku8tjsq42ytsxt3jmkft3ytysm.jpg" alt="Лента / Фольга">
+          <div class="card_title">Лента / Фольга</div>
+          <div class="card-description">
+            <div class="card-description_title">Лента / Фольга</div>
+            <p class="text_description">Горячекатаная и холоднокатаная лента, полностью соответствующая стандартам
+            </p>
+          </div>
+        </a>
+
+        <a class="card_production" href="/products/truby/">
+          <img class="pictures_img" src="/upload/iblock/c47/hfj4lw2j2p56uw43oh4jkgxie9sny2kk.jpg" alt="Труба">
+          <div class="card_title">Труба</div>
+          <div class="card-description">
+            <div class="card-description_title">Труба</div>
+            <p class="text_description">–</p>
+          </div>
+        </a>
+      </div>
+    </div> -->
+  </div>
+</article>
+<!-- <div class="ctn_privilege">
+    <div class="ctn_content_privilege">
+      <div class="ctn_header_privilege">
+        <h1>Наши преимущества</h1>
+      </div>
+      <div class="ctn_cards_privilege">
+        <div class="card_privilege">
+          <div class="card_img"><img src="/static/img/img_privilege/privilege_img_1.svg" alt="img"></div>
+          <div class="card_description">Широкий ассортимент продукции на собственных складах</div>
+        </div>
+        <div class="card_privilege">
+          <div class="card_img"><img src="/static/img/img_privilege/privilege_img_2.svg" alt="img"></div>
+          <div class="card_description">Сертифицированная продукция «РТ-Техприемка»</div>
+        </div>
+        <div class="card_privilege">
+          <div class="card_img"><img src="/static/img/img_privilege/privilege_img_3.svg" alt="img"></div>
+          <div class="card_description">Многолетний опыт научных изысканий и исследований</div>
+        </div>
+        <div class="card_privilege">
+          <div class="card_img"><img src="/static/img/img_privilege/privilege_img_4.svg" alt="img"></div>
+          <div class="card_description">Оптимальные сроки поставки независимо от внешних обстоятельств</div>
+        </div>
+        <div class="card_privilege">
+          <div class="card_img"><img src="/static/img/img_privilege/privilege_img_5.svg" alt="img"></div>
+          <div class="card_description">Производим аналоги зарубежных сплавов</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="ctn_services">
+    <div class="ctn_production_header">
+      <div class="production_title">
+        <h1>Услуги</h1>
+      </div>
+      <div class="production_button"><a href="/services/" class="button_transparent">Показать больше</a></div>
+    </div>
+
+
+
+    <div class="ctn_navigation_production">
+      <div class="content_prod">
+
+        <a class="card_production" href="/services/plavka/">
+          <img class="pictures_img" src="/upload/iblock/470/3j7m613kvxex2dtp57rfbz53uks3r36r.jpg" alt="Плавка">
+          <div class="card_title">Плавка</div>
+          <div class="card-description">
+            <div class="card-description_title">Плавка</div>
+            <p class="text_description">Слитки выплавленные в открытых индукционных печах или ЭШП</p>
+          </div>
+        </a>
+
+        <a class="card_production" href="/services/kovka/">
+          <img class="pictures_img" src="/upload/iblock/cf0/mav0mgaf0v3wiabk64p0bvc2cjb5bd1s.jpg" alt="Ковка">
+          <div class="card_title">Ковка</div>
+          <div class="card-description">
+            <div class="card-description_title">Ковка</div>
+            <p class="text_description">Производственный комплекс, включающий в себя кузнечные молоты с весом
+              падающих частей</p>
+          </div>
+        </a>
+
+        <a class="card_production" href="/services/prokat/">
+          <img class="pictures_img" src="/upload/iblock/864/8omgy0ke8wheu8ygbzex00qx4sl1k6y9.jpg" alt="Прокат">
+          <div class="card_title">Прокат</div>
+          <div class="card-description">
+            <div class="card-description_title">Прокат</div>
+            <p class="text_description">Прокат из собственной или давальческой заготовки</p>
+          </div>
+        </a>
+
+        <a class="card_production" href="/services/termoobrabotka/">
+          <img class="pictures_img" src="/upload/iblock/311/s5fjujqeoj5bntivunabv1qpe3g16n7m.jpg" alt="Термообработка">
+          <div class="card_title">Термообработка</div>
+          <div class="card-description">
+            <div class="card-description_title">Термообработка</div>
+            <p class="text_description">Термообработка слитков, катанки, прутков, проволоки, полосы и ленты в
+              рулонах</p>
+          </div>
+        </a>
+
+        <a class="card_production" href="/services/volochenie/">
+          <img class="pictures_img" src="/upload/iblock/012/lvyqpe85njyfun6zewctmex3qdg1q0qb.jpg" alt="Волочение">
+          <div class="card_title">Волочение</div>
+          <div class="card-description">
+            <div class="card-description_title">Волочение</div>
+            <p class="text_description">Волочение проволоки от 0.2 до 13 мм</p>
+          </div>
+        </a>
+
+        <a class="card_production" href="/services/ispytanie-materialov/">
+          <img class="pictures_img" src="/upload/iblock/e0c/9quzv3wi5cv746tp39zhd2d43gjgucib.jpg"
+            alt="Испытание материалов">
+          <div class="card_title">Испытание материалов</div>
+          <div class="card-description">
+            <div class="card-description_title">Испытание материалов</div>
+            <p class="text_description">Определение химического состава сталей и сплавов, а так же их испытания
+              (включающие в себя микро и макро исследование сталей и сплавов)</p>
+          </div>
+        </a>
+      </div>
+    </div>
+
+
+
+
+
+
+  </div>
+
+  <div class="ctn_info_zavod">
+    <div class="ctn_info_zavod_content">
+      <div class="ctn_info_1">
+        <div class="ctn_info_1_title">
+          <h1>О заводе</h1>
+        </div>
+        <div class="ctn_description">
+          Экспериментальный Завод Качественных Сплавов «Мценскпрокат» — это современное предприятие, которое
+          объединяет в себе новейшие технологии точной металлургии. Мы осуществляем полный цикл производства
+          прецизионных сплавов, что позволяет нам гарантировать высокое качество нашей продукции.
+        </div>
+        <div class="ctn_description">
+          Наша компания специализируется на производстве и поставке прецизионных сплавов и металлопроката, а также
+          на изготовлении и продаже металлопродукции.
+
+        </div>
+        <div class="ctn_info_button">
+          <button class="button-dashed_border_orange">О КОМПАНИИ</button>
+          <a href="/about/#about_video" class="button-dashed">ПРЕЗЕНТАЦИЯ</a>
+        </div>
+      </div>
+      <div class="ctn_info_2">
+        <div class="ctn_img_info"></div>
+        <div class="ctn_assortment">
+          <div class="assortment_1">
+            <div class="assortment_1_title">150 +</div>
+            <div class="class_description_assortment">Ассортимент продукции завода представлен более чем ста видами
+              сплавов..</div>
+          </div>
+          <div class="assortment_2">
+            <div class="assortment_1_title">150 +</div>
+            <div class="class_description_assortment">Ассортимент продукции завода представлен более чем ста видами
+              сплавов..</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="ctn_calculator">
+    <div class="ctn_content_calculator">
+      <div class="ctn_calculator_header">Калькулятор металлопроката</div>
+      <div class="ctn_calculator_description">
+        Удобный инструмент для расчёта веса и размера цветного и нержавеющего металлопроката в зависимости от
+        характеристи сортамента.
+      </div>
+      <div class="ctn_calculator-button">
+        <a href="/calculator/" class="button_orange">ОТКРЫТЬ КАЛЬКУЛЯТОР</a>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="ctn_news">
+    <div class="ctn_content_news">
+      <div class="ctn_header_news">
+        <div class="title_news">
+          <h1>Новости</h1>
+        </div>
+        <div class="ctn_button_news"><a href="/news/" class="button_transparent">Все новости</a></div>
+      </div>
+
+
+
+      <div class="content_news">
+        <div class="card_new" href="/news/polucheno-prochnoe-vodostoykoe-soedinenie/">
+          <div class="ctn_img_news">
+            <img class="img_card" src="/upload/resize_cache/iblock/470/209_189_2/3j7m613kvxex2dtp57rfbz53uks3r36r.jpg"
+              alt="Получено прочное водостойкое соединение">
+          </div>
+          <div class="ctn_description_new">
+            <div class="description_new">Получено прочное водостойкое соединение</div>
+            <div class="new_date">27 Мая 2010</div>
+          </div>
+        </div>
+
+        <div class="card_new" href="/news/polucheno-prochnoe-vodostoykoe-soedinenie23/">
+          <div class="ctn_img_news">
+            <img class="img_card" src="/static/img/no_img_news_list.jpg" alt="Получено прочное водостойкое соединение">
+          </div>
+          <div class="ctn_description_new">
+            <div class="description_new">Получено прочное водостойкое соединение</div>
+            <div class="new_date">27 Мая 2010</div>
+          </div>
+        </div>
+
+        <div class="card_new" href="/news/mezhdunarodnaya-mebelnaya-vystavka-salon-del-mobile/">
+          <div class="ctn_img_news">
+            <img class="img_card" src="/upload/resize_cache/iblock/470/209_189_2/3j7m613kvxex2dtp57rfbz53uks3r36r.jpg"
+              alt="Международная мебельная выставка SALON DEL MOBILE">
+          </div>
+          <div class="ctn_description_new">
+            <div class="description_new">Международная мебельная выставка SALON DEL MOBILE</div>
+            <div class="new_date">26 Мая 2010</div>
+          </div>
+        </div>
+
+        <div class="card_new" href="/news/mebelnyy-forum-belarusi/">
+          <div class="ctn_img_news">
+            <img class="img_card" src="/upload/resize_cache/iblock/470/209_189_2/3j7m613kvxex2dtp57rfbz53uks3r36r.jpg"
+              alt="Мебельный форум Беларуси">
+          </div>
+          <div class="ctn_description_new">
+            <div class="description_new">Мебельный форум Беларуси</div>
+            <div class="new_date">17 Сентября 2010</div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="news-slider slick-initialized slick-slider slick-dotted" style=""><button
+          class="slick-prev slick-arrow" aria-label="Previous" type="button" style="">Previous</button>
+
+
+
+
+        <div class="slick-list draggable">
+          <div class="slick-track" style="opacity: 1; width: 0px; transform: translate3d(0px, 0px, 0px);">
+            <div class="slide_item slick-slide slick-cloned" style="width: 0px;" tabindex="-1" role="tabpanel" id=""
+              aria-describedby="slick-slide-control01" data-slick-index="-3" aria-hidden="true">
+              <div class="news_img">
+                <img src="/static/img/no_img_news_list.jpg" alt="Получено прочное водостойкое соединение">
+              </div>
+              <div class="news_content">
+                <a href="/news/polucheno-prochnoe-vodostoykoe-soedinenie23/" class="news_title" tabindex="-1">Получено
+                  прочное водостойкое соединение</a>
+                <div class="news_date">27 Мая 2010</div>
+              </div>
+            </div>
+            <div class="slide_item slick-slide slick-cloned" style="width: 0px;" tabindex="-1" role="tabpanel" id=""
+              aria-describedby="slick-slide-control02" data-slick-index="-2" aria-hidden="true">
+              <div class="news_img">
+                <img src="/upload/resize_cache/iblock/470/209_189_2/3j7m613kvxex2dtp57rfbz53uks3r36r.jpg"
+                  alt="Международная мебельная выставка SALON DEL MOBILE">
+              </div>
+              <div class="news_content">
+                <a href="/news/mezhdunarodnaya-mebelnaya-vystavka-salon-del-mobile/" class="news_title"
+                  tabindex="-1">Международная мебельная выставка SALON DEL MOBILE</a>
+                <div class="news_date">26 Мая 2010</div>
+              </div>
+            </div>
+            <div class="slide_item slick-slide slick-cloned" style="width: 0px;" tabindex="-1" role="tabpanel" id=""
+              aria-describedby="slick-slide-control03" data-slick-index="-1" aria-hidden="true">
+              <div class="news_img">
+                <img src="/upload/resize_cache/iblock/470/209_189_2/3j7m613kvxex2dtp57rfbz53uks3r36r.jpg"
+                  alt="Мебельный форум Беларуси">
+              </div>
+              <div class="news_content">
+                <a href="/news/mebelnyy-forum-belarusi/" class="news_title" tabindex="-1">Мебельный форум
+                  Беларуси</a>
+                <div class="news_date">17 Сентября 2010</div>
+              </div>
+            </div>
+            <div class="slide_item slick-slide slick-current slick-active" style="width: 0px;" tabindex="0"
+              role="tabpanel" id="slick-slide00" aria-describedby="slick-slide-control00" data-slick-index="0"
+              aria-hidden="false">
+              <div class="news_img">
+                <img src="/upload/resize_cache/iblock/470/209_189_2/3j7m613kvxex2dtp57rfbz53uks3r36r.jpg"
+                  alt="Получено прочное водостойкое соединение">
+              </div>
+              <div class="news_content">
+                <a href="/news/polucheno-prochnoe-vodostoykoe-soedinenie/" class="news_title" tabindex="0">Получено
+                  прочное водостойкое соединение</a>
+                <div class="news_date">27 Мая 2010</div>
+              </div>
+            </div>
+            <div class="slide_item slick-slide slick-active" style="width: 0px;" tabindex="0" role="tabpanel"
+              id="slick-slide01" aria-describedby="slick-slide-control01" data-slick-index="1" aria-hidden="false">
+              <div class="news_img">
+                <img src="/static/img/no_img_news_list.jpg" alt="Получено прочное водостойкое соединение">
+              </div>
+              <div class="news_content">
+                <a href="/news/polucheno-prochnoe-vodostoykoe-soedinenie23/" class="news_title" tabindex="0">Получено
+                  прочное водостойкое соединение</a>
+                <div class="news_date">27 Мая 2010</div>
+              </div>
+            </div>
+            <div class="slide_item slick-slide slick-active" style="width: 0px;" tabindex="0" role="tabpanel"
+              id="slick-slide02" aria-describedby="slick-slide-control02" data-slick-index="2" aria-hidden="false">
+              <div class="news_img">
+                <img src="/upload/resize_cache/iblock/470/209_189_2/3j7m613kvxex2dtp57rfbz53uks3r36r.jpg"
+                  alt="Международная мебельная выставка SALON DEL MOBILE">
+              </div>
+              <div class="news_content">
+                <a href="/news/mezhdunarodnaya-mebelnaya-vystavka-salon-del-mobile/" class="news_title"
+                  tabindex="0">Международная мебельная выставка SALON DEL MOBILE</a>
+                <div class="news_date">26 Мая 2010</div>
+              </div>
+            </div>
+            <div class="slide_item slick-slide" style="width: 0px;" tabindex="-1" role="tabpanel" id="slick-slide03"
+              aria-describedby="slick-slide-control03" data-slick-index="3" aria-hidden="true">
+              <div class="news_img">
+                <img src="/upload/resize_cache/iblock/470/209_189_2/3j7m613kvxex2dtp57rfbz53uks3r36r.jpg"
+                  alt="Мебельный форум Беларуси">
+              </div>
+              <div class="news_content">
+                <a href="/news/mebelnyy-forum-belarusi/" class="news_title" tabindex="-1">Мебельный форум
+                  Беларуси</a>
+                <div class="news_date">17 Сентября 2010</div>
+              </div>
+            </div>
+            <div class="slide_item slick-slide slick-cloned" style="width: 0px;" tabindex="-1" role="tabpanel" id=""
+              aria-describedby="slick-slide-control00" data-slick-index="4" aria-hidden="true">
+              <div class="news_img">
+                <img src="/upload/resize_cache/iblock/470/209_189_2/3j7m613kvxex2dtp57rfbz53uks3r36r.jpg"
+                  alt="Получено прочное водостойкое соединение">
+              </div>
+              <div class="news_content">
+                <a href="/news/polucheno-prochnoe-vodostoykoe-soedinenie/" class="news_title" tabindex="-1">Получено
+                  прочное водостойкое соединение</a>
+                <div class="news_date">27 Мая 2010</div>
+              </div>
+            </div>
+            <div class="slide_item slick-slide slick-cloned" style="width: 0px;" tabindex="-1" role="tabpanel" id=""
+              aria-describedby="slick-slide-control01" data-slick-index="5" aria-hidden="true">
+              <div class="news_img">
+                <img src="/static/img/no_img_news_list.jpg" alt="Получено прочное водостойкое соединение">
+              </div>
+              <div class="news_content">
+                <a href="/news/polucheno-prochnoe-vodostoykoe-soedinenie23/" class="news_title" tabindex="-1">Получено
+                  прочное водостойкое соединение</a>
+                <div class="news_date">27 Мая 2010</div>
+              </div>
+            </div>
+            <div class="slide_item slick-slide slick-cloned" style="width: 0px;" tabindex="-1" role="tabpanel" id=""
+              aria-describedby="slick-slide-control02" data-slick-index="6" aria-hidden="true">
+              <div class="news_img">
+                <img src="/upload/resize_cache/iblock/470/209_189_2/3j7m613kvxex2dtp57rfbz53uks3r36r.jpg"
+                  alt="Международная мебельная выставка SALON DEL MOBILE">
+              </div>
+              <div class="news_content">
+                <a href="/news/mezhdunarodnaya-mebelnaya-vystavka-salon-del-mobile/" class="news_title"
+                  tabindex="-1">Международная мебельная выставка SALON DEL MOBILE</a>
+                <div class="news_date">26 Мая 2010</div>
+              </div>
+            </div>
+            <div class="slide_item slick-slide slick-cloned" style="width: 0px;" tabindex="-1" role="tabpanel" id=""
+              aria-describedby="slick-slide-control03" data-slick-index="7" aria-hidden="true">
+              <div class="news_img">
+                <img src="/upload/resize_cache/iblock/470/209_189_2/3j7m613kvxex2dtp57rfbz53uks3r36r.jpg"
+                  alt="Мебельный форум Беларуси">
+              </div>
+              <div class="news_content">
+                <a href="/news/mebelnyy-forum-belarusi/" class="news_title" tabindex="-1">Мебельный форум
+                  Беларуси</a>
+                <div class="news_date">17 Сентября 2010</div>
+              </div>
+            </div>
+          </div>
+        </div><button class="slick-next slick-arrow" aria-label="Next" type="button" style="">Next</button>
+        <ul class="slick-dots" style="" role="tablist">
+          <li class="slick-active" role="presentation"><button type="button" role="tab" id="slick-slide-control00"
+              aria-controls="slick-slide00" aria-label="1 of 2" tabindex="0" aria-selected="true">1</button></li>
+          <li role="presentation"><button type="button" role="tab" id="slick-slide-control01"
+              aria-controls="slick-slide01" aria-label="2 of 2" tabindex="-1">2</button></li>
+          <li role="presentation"><button type="button" role="tab" id="slick-slide-control02"
+              aria-controls="slick-slide02" aria-label="3 of 2" tabindex="-1">3</button></li>
+          <li role="presentation"><button type="button" role="tab" id="slick-slide-control03"
+              aria-controls="slick-slide03" aria-label="4 of 2" tabindex="-1">4</button></li>
+        </ul>
+      </div>
+
+
+
+
+
+
+
+
+
+    </div>
+  </div>
+
+  <div class="partners_block">
+    <div class="partners_wrap">
+      <div class="partners_title">
+        <h2>Наши партнеры</h2>
+      </div>
+      <div style="width:100%;height:max-content;">
+
+
+        <div class="partners-slider slick-initialized slick-slider slick-dotted"><button class="slick-prev slick-arrow"
+            aria-label="Previous" type="button" style="">Previous</button>
+
+
+
+
+
+
+          <div class="slick-list draggable">
+            <div class="slick-track"
+              style="opacity: 1; width: 4192px; transform: translate3d(-1572px, 0px, 0px); transition: transform 600ms;">
+              <div class="slick-slide slick-cloned" style="width: 262px;" tabindex="-1" role="tabpanel" id=""
+                aria-describedby="slick-slide-control12" data-slick-index="-4" aria-hidden="true">
+                <img src="/upload/iblock/26d/h2aw4lv2z0bto6ztmd355i29v4qjwwtr.png" alt="Третий">
+              </div>
+              <div class="slick-slide slick-cloned" style="width: 262px;" tabindex="-1" role="tabpanel" id=""
+                aria-describedby="slick-slide-control13" data-slick-index="-3" aria-hidden="true">
+                <img src="/upload/iblock/26d/h2aw4lv2z0bto6ztmd355i29v4qjwwtr.png" alt="Четвертый">
+              </div>
+              <div class="slick-slide slick-cloned" style="width: 262px;" tabindex="-1" role="tabpanel" id=""
+                aria-describedby="slick-slide-control14" data-slick-index="-2" aria-hidden="true">
+                <img src="/upload/iblock/26d/h2aw4lv2z0bto6ztmd355i29v4qjwwtr.png" alt="Пятый1">
+              </div>
+              <div class="slick-slide slick-cloned" style="width: 262px;" tabindex="-1" role="tabpanel" id=""
+                aria-describedby="slick-slide-control15" data-slick-index="-1" aria-hidden="true">
+                <img src="/upload/iblock/26d/h2aw4lv2z0bto6ztmd355i29v4qjwwtr.png" alt="Пятый">
+              </div>
+              <div class="slick-slide" style="width: 262px;" tabindex="-1" role="tabpanel" id="slick-slide10"
+                aria-describedby="slick-slide-control10" data-slick-index="0" aria-hidden="true">
+                <img src="/upload/iblock/26d/h2aw4lv2z0bto6ztmd355i29v4qjwwtr.png" alt="Первый">
+              </div>
+              <div class="slick-slide" style="width: 262px;" tabindex="0" role="tabpanel" id="slick-slide11"
+                aria-describedby="slick-slide-control11" data-slick-index="1" aria-hidden="true">
+                <img src="/upload/iblock/26d/h2aw4lv2z0bto6ztmd355i29v4qjwwtr.png" alt="Второй">
+              </div>
+              <div class="slick-slide slick-current slick-active" style="width: 262px;" tabindex="0" role="tabpanel"
+                id="slick-slide12" aria-describedby="slick-slide-control12" data-slick-index="2" aria-hidden="false">
+                <img src="/upload/iblock/26d/h2aw4lv2z0bto6ztmd355i29v4qjwwtr.png" alt="Третий">
+              </div>
+              <div class="slick-slide slick-active" style="width: 262px;" tabindex="0" role="tabpanel"
+                id="slick-slide13" aria-describedby="slick-slide-control13" data-slick-index="3" aria-hidden="false">
+                <img src="/upload/iblock/26d/h2aw4lv2z0bto6ztmd355i29v4qjwwtr.png" alt="Четвертый">
+              </div>
+              <div class="slick-slide slick-active" style="width: 262px;" tabindex="0" role="tabpanel"
+                id="slick-slide14" aria-describedby="slick-slide-control14" data-slick-index="4" aria-hidden="false">
+                <img src="/upload/iblock/26d/h2aw4lv2z0bto6ztmd355i29v4qjwwtr.png" alt="Пятый1">
+              </div>
+              <div class="slick-slide slick-active" style="width: 262px;" tabindex="-1" role="tabpanel"
+                id="slick-slide15" aria-describedby="slick-slide-control15" data-slick-index="5" aria-hidden="false">
+                <img src="/upload/iblock/26d/h2aw4lv2z0bto6ztmd355i29v4qjwwtr.png" alt="Пятый">
+              </div>
+              <div class="slick-slide slick-cloned" style="width: 262px;" tabindex="-1" role="tabpanel" id=""
+                aria-describedby="slick-slide-control10" data-slick-index="6" aria-hidden="true">
+                <img src="/upload/iblock/26d/h2aw4lv2z0bto6ztmd355i29v4qjwwtr.png" alt="Первый">
+              </div>
+              <div class="slick-slide slick-cloned" style="width: 262px;" tabindex="-1" role="tabpanel" id=""
+                aria-describedby="slick-slide-control11" data-slick-index="7" aria-hidden="true">
+                <img src="/upload/iblock/26d/h2aw4lv2z0bto6ztmd355i29v4qjwwtr.png" alt="Второй">
+              </div>
+              <div class="slick-slide slick-cloned" style="width: 262px;" tabindex="-1" role="tabpanel" id=""
+                aria-describedby="slick-slide-control12" data-slick-index="8" aria-hidden="true">
+                <img src="/upload/iblock/26d/h2aw4lv2z0bto6ztmd355i29v4qjwwtr.png" alt="Третий">
+              </div>
+              <div class="slick-slide slick-cloned" style="width: 262px;" tabindex="-1" role="tabpanel" id=""
+                aria-describedby="slick-slide-control13" data-slick-index="9" aria-hidden="true">
+                <img src="/upload/iblock/26d/h2aw4lv2z0bto6ztmd355i29v4qjwwtr.png" alt="Четвертый">
+              </div>
+              <div class="slick-slide slick-cloned" style="width: 262px;" tabindex="-1" role="tabpanel" id=""
+                aria-describedby="slick-slide-control14" data-slick-index="10" aria-hidden="true">
+                <img src="/upload/iblock/26d/h2aw4lv2z0bto6ztmd355i29v4qjwwtr.png" alt="Пятый1">
+              </div>
+              <div class="slick-slide slick-cloned" style="width: 262px;" tabindex="-1" role="tabpanel" id=""
+                aria-describedby="slick-slide-control15" data-slick-index="11" aria-hidden="true">
+                <img src="/upload/iblock/26d/h2aw4lv2z0bto6ztmd355i29v4qjwwtr.png" alt="Пятый">
+              </div>
+            </div>
+          </div><button class="slick-next slick-arrow" aria-label="Next" type="button" style="">Next</button>
+          <ul class="slick-dots" style="" role="tablist">
+            <li class="" role="presentation"><button type="button" role="tab" id="slick-slide-control10"
+                aria-controls="slick-slide10" aria-label="1 of 2" tabindex="-1">1</button></li>
+            <li role="presentation" class=""><button type="button" role="tab" id="slick-slide-control11"
+                aria-controls="slick-slide11" aria-label="2 of 2" tabindex="0" aria-selected="true">2</button></li>
+            <li role="presentation" class="slick-active"><button type="button" role="tab" id="slick-slide-control12"
+                aria-controls="slick-slide12" aria-label="3 of 2" tabindex="-1">3</button></li>
+            <li role="presentation" class=""><button type="button" role="tab" id="slick-slide-control13"
+                aria-controls="slick-slide13" aria-label="4 of 2" tabindex="-1">4</button></li>
+            <li role="presentation" class=""><button type="button" role="tab" id="slick-slide-control14"
+                aria-controls="slick-slide14" aria-label="5 of 2" tabindex="-1">5</button></li>
+            <li role="presentation" class=""><button type="button" role="tab" id="slick-slide-control15"
+                aria-controls="slick-slide15" aria-label="6 of 2" tabindex="-1">6</button></li>
+          </ul>
+        </div>
+
+
+
+
+
+
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="ctn_more_information">
+    <div class="ctn_content_more_Info">
+      <div class="header_more_info">Нужно больше информации?</div>
+      <div class="more_info_description">
+        Чтобы получить ответы на свои вопросы, заполните форму ниже. Наши менеджеры свяжутся с вами в ближайшее
+        время
+      </div>
+      <div class="ctn_form_more_info">
+        <div><input class="form_input_info" type="text" placeholder="Имя"></div>
+        <div><input class="form_input_info" type="text" placeholder="Телефон или email"></div>
+        <div><button class="button_orange_404">Отправить</button></div>
+      </div>
+      <div class="ctn_subtext">Отправляя форму, вы соглашаетесь на обработку персональных данных</div>
+    </div>
+  </div> -->
+
+
+
+
+
+{% endblock %}
