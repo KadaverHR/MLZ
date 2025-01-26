@@ -32,19 +32,19 @@
 <body {% if bodyClass %} class="{{ bodyClass }} body" {% endif %} id="body">
 
 
-  {% include "html/includes/header.html" %}
+  {% include "includes/header.html" %}
 
 
   <main>
-    <section class="gray">
+    <!-- <section class="gray">
       <div class="container ">
-        {% include "html/includes/breadcrumbs.html" %}
+        {% include "includes/breadcrumbs.html" %}
       </div>
-    </section>
+    </section> -->
     {% block content %}{% endblock %}
 
   </main>
-  {% include "html/includes/footer.html" %}
+  {% include "includes/footer.html" %}
 
 
 <!-- 

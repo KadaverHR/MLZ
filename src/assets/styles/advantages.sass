@@ -1,0 +1,30 @@
+.advantages-card
+  display: grid
+  gap: 20px
+  &:hover
+    & .advantages-card__box
+      box-shadow: 0px 8px 35px 0px rgba(0, 0, 0, 0.15)
+    & .advantages-card__text
+      color: $orange
+  &__box
+    display: grid
+    justify-content: center
+    align-items: center
+    padding: 41px 39px
+    background: #fff
+    border-radius: 5px
+    box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.15)
+    transition: box-shadow $anim
+  &__text
+    font-weight: 400
+    font-size: 16px
+    line-height: 137%
+    color: #0d0d0e
+    transition: color $anim
+.advantages
+  &__list
+    display: grid
+    grid-template-columns: repeat(5, 1fr)
+    gap: 30px
+  &__item
+    cursor: pointer

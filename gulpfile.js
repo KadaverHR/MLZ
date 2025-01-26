@@ -4,7 +4,7 @@
 const gulp = require('gulp');
 const argv = require('yargs').argv;
 const browserSync = require('browser-sync').create();
-const nunjucks = require('gulp-nunjucks');
+const nunjucksRender = require('gulp-nunjucks-render');
 const sass = require('gulp-sass')(require('sass'));
 const sourcemaps = require('gulp-sourcemaps');
 const gulpif = require('gulp-if');
@@ -135,12 +135,24 @@ function browsersync() {
  */
 function njk() {
   return gulp.src(path.src.html)
-    .pipe(nunjucks.compile())
+    .pipe(nunjucksRender({
+      path: ['src/html/'] // Путь к папке с шаблонами
+    }))
     .pipe(gulp.dest(path.dist.html))
     .on('end', browserSync.reload);
 }
 
-exports.njk = njk;
+
+function libs() {
+  return gulp.src(path.src.libs)
+    .pipe(plumber())
+    .pipe(webpackStream(webpackConf, webpack))
+    .pipe(gulpif(isProd(), gulp.dest(path.dist.libs)))
+    .pipe(gulpif(isProd(), uglify()))
+    .pipe(rename({ suffix: '.min' }))
+    .pipe(gulp.dest(path.dist.libs))
+    .pipe(browserSync.reload({ stream: true }));
+}
 
 /**
  * Style
@@ -159,9 +171,9 @@ function scss() {
     .pipe(gulpif(isDev(), sourcemaps.write()))
     .pipe(gulpif(isProd(), gulp.dest(path.dist.style)))
     .pipe(gulpif(isProd(), csso()))
-    .pipe(rename({suffix: '.min'}))
+    .pipe(rename({ suffix: '.min' }))
     .pipe(gulp.dest(path.dist.style))
-    .pipe(browserSync.reload({stream: true}))
+    .pipe(browserSync.reload({ stream: true }))
 }
 
 /**
@@ -197,7 +209,7 @@ function script() {
     // .pipe(gulpif(isProd(), uglify()))
     // .pipe(rename({suffix: '.min'}))
     .pipe(gulp.dest(path.dist.script))
-    .pipe(browserSync.reload({stream: true}))
+    .pipe(browserSync.reload({ stream: true }))
 }
 function libs() {
   return gulp.src(path.src.libs)
@@ -207,7 +219,7 @@ function libs() {
     // .pipe(gulpif(isProd(), uglify()))
     // .pipe(rename({suffix: '.min'}))
     .pipe(gulp.dest(path.dist.libs))
-    // .pipe(browserSync.reload({stream: true}))
+  // .pipe(browserSync.reload({stream: true}))
 }
 /**
  * Image min
@@ -223,22 +235,22 @@ function imageMin() {
         max: 90,
         quality: ['high']
       }),
-      
+
       pngquant({
         speed: 5,
-        quality: [0.6,0.8]
+        quality: [0.6, 0.8]
       }),
 
       imagemin.svgo({
         plugins: [
-          {removeViewBox: false},
-          {removeUnusedNS: false},
-          {removeUselessStrokeAndFill: false},
-          {cleanupIDs: false},
-          {removeComments: true},
-          {removeEmptyAttrs: true},
-          {removeEmptyText: true},
-          {collapseGroups: true}
+          { removeViewBox: false },
+          { removeUnusedNS: false },
+          { removeUselessStrokeAndFill: false },
+          { cleanupIDs: false },
+          { removeComments: true },
+          { removeEmptyAttrs: true },
+          { removeEmptyText: true },
+          { collapseGroups: true }
         ]
       })
 
@@ -325,6 +337,14 @@ function watch() {
  */
 exports.default = gulp.series(
   gulp.parallel(clean),
-  gulp.parallel(njk, scss, script, libs,image, font),
+  gulp.parallel(njk, scss, script, libs, image, font),
   gulp.parallel(browsersync, watch)
 );
+
+gulp.task('njk', function () {
+  return gulp.src('src/*.html') // Исходные файлы
+    .pipe(nunjucksRender({
+      path: ['src/html/layouts/'] // Путь к папке с шаблонами
+    }))
+    .pipe(gulp.dest('dist')); // Куда сохранять результат
+});

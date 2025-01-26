@@ -1,0 +1,189 @@
+.header
+  &__top
+    background: #fff
+    padding: 19px
+  &__top-box
+    display: grid
+    grid-auto-flow: column
+    gap: 40px
+    grid-template-columns: repeat(2, auto) 1fr auto
+  &__top-contacts
+    display: grid
+    gap: 10px
+    align-items: center
+    justify-content: start
+  &__top-link
+    display: grid
+    gap: 5px
+    grid-auto-flow: column
+    align-items: center
+    position: relative
+    justify-content: start
+    justify-items: start
+    strong
+      font-weight: 700
+    &::before
+      content: ''
+      display: grid
+      width: 24px
+      height: 24px
+    &.phone
+      background: url(/assets/img/phone.svg) no-repeat left center
+    &.mail
+      background: url(/assets/img/mail.svg) no-repeat left center
+    &.compare
+      background: url(/assets/img/compare.svg) no-repeat left center
+    &.calculator
+      background: url(/assets/img/calc.svg) no-repeat left center
+    &.map
+      background: url(/assets/img/map.svg) no-repeat left top
+    &:hover .header__top-link-text
+      color: $orange
+    &:hover .header__top-link-text::after
+      opacity: 1
+  &__top-link-text
+    font-weight: 400
+    font-size: 15px
+    line-height: 120%
+    color: #0d0d0e
+    transition: color $anim
+    position: relative
+    &::after
+      content: ''
+      width: 100%
+      height: 1px
+      background: $orange
+      bottom: -1px
+      left: 50%
+      transform: translateX(-50%)
+      position: absolute
+      opacity: 0
+      transition: opacity $anim
+  &__top-input
+    border: 1px solid #dbdcde
+    border-radius: 5px
+    padding: 11px 10px
+    background: #f4f4f4
+  &__top-search
+    position: relative
+    display: grid
+    align-items: center
+    align-self: center
+  &__top-submit
+    display: grid
+    position: absolute
+    right: 0
+    top: 50%
+    transform: translateY(-50%)
+    width: 30px
+    height: 100%
+    cursor: pointer
+    background: url(/assets/img/search.svg) no-repeat center center
+
+  &__bottom
+    background: #4c555e
+
+.nav
+  &__list
+    display: grid
+    grid-auto-flow: column
+    grid-template-columns: repeat(8, auto)
+    align-items: center
+    box-shadow: 0 4px 15px 0 rgba(76, 85, 94, 0.5)
+  &__subnav-list
+    display: none
+    position: absolute
+    background: #fff
+    top: 65px
+    left: 0
+    width: 100%
+    min-width: 250px
+    box-shadow: 0 4px 15px 0 rgba(76, 85, 94, 0.5)
+  &__item
+    display: grid
+    align-items: center
+    justify-items: center
+    position: relative
+    transition: background $anim
+    &::before
+      content: ''
+      height: 30px
+      width: 1px
+      background: #86878c
+      right: 0
+      top: 50%
+      transform: translateY(-50%)
+      position: absolute
+    &:last-child
+      &::before
+        display: none
+    &:has(.nav__link:hover)
+      background: #3a4147
+      &::before
+        display: none
+    &:has(+ .nav__item:hover)
+      &::before
+        display: none
+    &:hover
+      .nav__link ~ .nav__subnav-list
+        display: grid
+
+  &__link
+    font-weight: 600
+    font-size: 14px
+    padding: 25px 10px
+    height: 100%
+    display: grid
+    align-items: center
+    justify-content: center
+    text-transform: capitalize
+    color: #fff
+    text-transform: uppercase
+    width: 100%
+    &.arrow
+      position: relative
+      grid-auto-flow: column
+      gap: 10px
+      &::after
+        content: ''
+        background: url(/assets/img/arrow.svg) no-repeat center center
+        width: 10px
+        height: 6px
+        transition: transform $anim
+    &:hover.arrow
+      &::after
+        transform: rotate(180deg)
+  &__subnav-link
+    font-weight: 600
+    font-size: 14px
+    color: #0d0d0e
+    transition: color $anim, background $anim
+    padding: 10px 30px
+    display: grid
+    &:hover
+      color: $orange
+      background: #F4F4F4
+    &.arrow
+      position: relative
+      grid-auto-flow: column
+      gap: 10px
+      display: grid
+      align-items: center
+      &::after
+        content: ''
+        background: url(/assets/img/arrow2.svg) no-repeat center center
+        width: 10px
+        height: 6px
+        transform: rotate(-90deg)
+  &__subnav-item
+    position: relative
+    &:hover
+      .nav__subnav-list
+        position: absolute
+        display: grid
+        left: 100%
+        top: 0
+        display: grid
+
+.mobile_top_level
+  display: none

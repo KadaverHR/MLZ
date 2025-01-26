@@ -1,0 +1,57 @@
+.feedback
+  background: url(/assets/img/feedback.jpg) no-repeat center top / cover
+  .title
+    color: #fff
+    text-align: center
+    margin-bottom: 30px
+  &__box
+    display: grid
+    justify-items: center
+    gap: 25px
+  &__text
+    font-weight: 600
+    font-size: 18px
+    line-height: 156%
+    text-align: center
+    color: #fff
+  &__btn
+    border-radius: 5px
+    padding: 15px 40px
+    background: $orange
+    font-weight: 700
+    font-size: 15px
+    color: #fff
+    text-transform: uppercase
+    transition: background $anim
+    &:hover
+      background: $orange-hover
+  &__form
+    display: grid
+    gap: 20px
+    grid-template-columns: repeat(3, 1fr)
+    justify-self: stretch
+  &__input
+    padding: 16px 10px
+    border-radius: 5px
+    &::placeholder
+      font-weight: 400
+      font-size: 16px
+      line-height: 137%
+      color: #121212
+  &__form-text
+    font-weight: 600
+    font-size: 16px
+    line-height: 125%
+    color: #fff
+    display: inline
+    .feedback__form-link
+      position: relative
+      color: #fff
+      &::before
+        content: ''
+        position: absolute
+        bottom: 0
+        left: 0
+        width: 100%
+        height: 1px
+        background: #fff
