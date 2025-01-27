@@ -1,12 +1,16 @@
 .about
   .title__link-box
     margin-bottom: 20px
-  &__left 
+  &__left
     display: grid
   &__box
     display: grid
     gap: 30px
     grid-template-columns: 450px auto
+    @media all and ($l)
+      grid-template-columns: 1fr 1fr
+    @media all and ($m)
+      grid-template-columns: 1fr
   &__text-box
     display: grid
     gap: 20px
@@ -17,12 +21,21 @@
     color: $black
     &.strong
       font-weight: 600
+    @media all and ($s)
+      font-size: 16px
+      line-height: 162%
   &__link-box
     display: grid
     margin-top: 35px
     gap: 20px
+    align-items: center
     grid-template-columns: 1fr 1fr
+    @media all and ($m)
+      max-height: 430px
+    @media all and ($s)
+      grid-template-columns: 1fr
   &__link-btn
+    text-align: center
     padding: 15px 40px
     font-weight: 700
     font-size: 15px
@@ -42,21 +55,41 @@
     border-radius: 5px
     grid-template-areas: "img orange" "img grey"
     grid-template-columns: 302px auto
+    @media all and ($l)
+      grid-template-columns: auto auto
+    @media all and ($m)
+      grid-template-columns: 1fr 1fr
+    @media all and ($s)
+      grid-template-areas: "img" "orange" "grey"
+      grid-template-columns: 1fr
+      grid-template-rows: repeat(3, 1fr)
   &__img
     grid-area: img
     height: 100%
     object-fit: cover
     border-radius: 5px 0 0 5px
+    @media all and ($m)
+      width: 100%
+    @media all and ($s)
+      max-height: 250px
+      object-position: center top
+      border-radius: 5px 5px 0 0
   &__img-desc.dark-grey
     grid-area: grey
     border-radius: 0 0 5px 0
+    @media all and ($s)
+      border-radius: 0 0 5px 5px
   &__img-desc.orange
     grid-area: orange
     border-radius: 0 5px 0 0
+    @media all and ($s)
+      border-radius: 0
   &__img-desc
     padding: 28px
     display: grid
     gap: 10px
+    @media all and ($s)
+      padding: 24px 28px
   &__img-text-count
     font-weight: 600
     font-size: 52px

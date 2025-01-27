@@ -1,40 +1,67 @@
 .banner
   background: url(/assets/img/banner-ng.jpg) no-repeat center top / cover
+  padding-top: 0
+  padding-bottom: 0
+  @media all and ($m)
+    max-height: 538px
+  @media all and ($s)
+    max-height: 549px
   &__box
     padding-top: 120px
     padding-bottom: 92px
+    @media all and ($m)
+      padding-top: 61px
+      padding-bottom: 74px
+    @media all and ($s)
+      padding-top: 57px
+      padding-bottom: 30px
   &__title-box
     display: grid
     gap: 15px
     margin-bottom: 30px
+    @media all and ($s)
+      gap: 10px
   &__title
     font-weight: 700
     font-size: 87px
     line-height: 86%
     text-transform: uppercase
     color: #fff
+    @media all and ($m)
+      font-size: 66px
+      line-height: 114%
+    @media all and ($s)
+      font-size: 38px
+      line-height: 111%
   &__subtitle
     font-weight: 600
     font-size: 32px
     text-transform: uppercase
     color: #fff
+    @media all and ($m)
+      font-size: 24px
+    @media all and ($s)
+      font-size: 22px
   &__desc
     font-weight: 600
     font-size: 21px
     color: #fff
     margin-bottom: 50px
+    @media all and ($s)
+      font-size: 18px
   &__btn-box
     margin-top: 50px
     display: grid
     justify-content: start
+    @media all and ($s)
+      margin-bottom: 30px
   &__btn
     border-radius: 5px
-    padding: 15px 47px
+    padding: 15px 40px
     background: $orange
     font-weight: 700
     font-size: 15px
     color: #fff
     transition: background $anim
-    &:hover 
+    &:hover
       background: $orange-hover
-

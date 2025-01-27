@@ -9,7 +9,7 @@
 
 {% include "includes/banner.html" %}
 
-<article class="grey products">
+<article data-aos="fade-up" data-aos-duration="800" data-aos-easing="ease-in-sine" class="grey products">
   <div class="container">
     <div class="title__link-box">
       <h2 class="title">Продукция</h2>
@@ -59,7 +59,7 @@
   </div>
 </article>
 
-<article class="white advantages">
+<article data-aos="fade-up" data-aos-duration="800" data-aos-easing="ease-in-sine" class="white advantages">
   <div class="container">
     <div class="title__link-box">
       <h2 class="title">Наши преимущества</h2>
@@ -96,7 +96,7 @@
   </div>
 </article>
 
-<article class="grey products">
+<article data-aos="fade-up" data-aos-duration="800" data-aos-easing="ease-in-sine" class="grey products">
   <div class="container">
     <div class="title__link-box">
       <h2 class="title">Услуги</h2>
@@ -146,7 +146,7 @@
   </div>
 </article>
 
-<article class="white about">
+<article data-aos="fade-up" data-aos-duration="800" data-aos-easing="ease-in-sine" class="white about">
   <div class="container">
     <div class="about__box">
       <div class="about__left">
@@ -191,7 +191,7 @@
   </div>
 </article>
 
-<article class="calc">
+<article data-aos="fade-up" data-aos-duration="800" data-aos-easing="ease-in-sine" class="calc">
   <div class="container">
     <h2 class="title">
       Калькулятор металлопроката
@@ -210,14 +210,15 @@
   </div>
 </article>
 
-<article class="news grey">
+<article data-aos="fade-up" data-aos-duration="800" data-aos-easing="ease-in-sine" class="news grey">
   <div class="container">
     <div class="title__link-box">
       <h2 class="title">Новости</h2>
       <a href="/news" class="title__link">Все новости</a>
     </div>
-
-    <ul class="news__list">
+  </div>
+  <div class="container">
+    <ul class="news__list news-carousel">
       <li class="news__item">
         {% set newsImgLink = "../assets/img/news1.jpg" %}
         {% set newsTitle = "Сортовой прокат в соответствии с установленными стандартами" %}
@@ -246,7 +247,36 @@
   </div>
 </article>
 
-<article class="feedback">
+<article data-aos="fade-up" data-aos-duration="800" data-aos-easing="ease-in-sine" class="partners white">
+  <div class="container">
+    <div class="title__link-box">
+      <h2 class="title">
+        Наши партнеры
+      </h2>
+    </div>
+  </div>
+  <div class="container">
+    <ul id="partnersCarousel" class="partners__list">
+      <li class="partners__item active">
+        <img class="partners__img" src="../assets/img/partner1.png" alt="">
+      </li>
+      <li class="partners__item active">
+        <img class="partners__img" src="../assets/img/partner1.png" alt="">
+      </li>
+      <li class="partners__item active">
+        <img class="partners__img" src="../assets/img/partner1.png" alt="">
+      </li>
+      <li class="partners__item active">
+        <img class="partners__img" src="../assets/img/partner1.png" alt="">
+      </li>
+      <li class="partners__item active">
+        <img class="partners__img" src="../assets/img/partner1.png" alt="">
+      </li>
+    </ul>
+  </div>
+</article>
+
+<article data-aos="fade-up" data-aos-duration="800" data-aos-easing="ease-in-sine" class="feedback">
   <div class="container">
     <h2 class="title">
       Нужно больше информации?

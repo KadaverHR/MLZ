@@ -26,5 +26,22 @@
     display: grid
     grid-template-columns: repeat(5, 1fr)
     gap: 30px
+    @media all and ($l)
+      display: flex
+      flex-wrap: wrap
+      justify-content: center
+      .advantages__item
+        max-width: calc((100% - 90px) / 4 )
+    @media all and ($m)
+      .advantages__item
+        max-width: calc((100% - 60px) / 3 )
+    @media all and ($s)
+      .advantages__item
+        max-width: calc((100% - 30px) / 2 )
+    @media all and ($xs)
+      .advantages__item
+        width: 100%
+        max-width: none
+
   &__item
     cursor: pointer

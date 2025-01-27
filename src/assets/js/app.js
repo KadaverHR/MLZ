@@ -67,35 +67,79 @@ $(document).ready(function () {
     });
   }
 
-  // Кнопка наверх
-  // const btnUp = {
-  //   el: document.querySelector('.btn-up'),
-  //   show() {
-  //     this.el.classList.remove('btn-up__hide');
-  //   },
-  //   hide() {
-  //     this.el.classList.add('btn-up__hide');
-  //   },
-  //   addEventListener() {
-  //     window.addEventListener('scroll', () => {
-  //       const scrollY = window.scrollY || document.documentElement.scrollTop;
-  //       scrollY > 400 ? this.show() : this.hide();
-  //     });
-  //     document.querySelector('.btn-up').onclick = () => {
-  //       window.scrollTo({
-  //         top: 0,
-  //         left: 0,
-  //         behavior: 'smooth'
-  //       });
-  //     }
-  //   }
-  // }
+  //карусель 
 
-  // btnUp.addEventListener();
+  $('#partnersCarousel').slick({
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    dots: true, // точки пагинации
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          dots: true, // точки пагинации
+        }
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          dots: true, // точки пагинации
+        }
+      }
+    ]
+  });
+  function initSlider() {
+    if ($(window).width() < 992) {
+      console.log($(window).width());
+      
+      // Инициализация слайдера, если ширина экрана меньше 992px
+      $('.news-carousel').slick({
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        dots: true, // точки пагинации
+        responsive: [
+          {
+            breakpoint: 576,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1,
+              dots: true // Пагинация остается включенной на всех разрешениях
+            }
+          }
+        ]
+      });
+    } else {
+      // Уничтожение слайдера, если ширина экрана больше или равна 992px
+      if ($('.news-carousel').hasClass('slick-initialized')) {
+        $('.news-carousel').slick('unslick');
+      }
+    }
+  }
+
+  // Инициализация слайдера при загрузке страницы
+  initSlider();
+
+  // Инициализация слайдера при изменении размера окна
+  $(window).resize(function () {
+    initSlider();
+  });
 
 
-
+  AOS.init();
 });
+
+
+
+
+
 
 
 

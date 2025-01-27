@@ -7,6 +7,9 @@
     grid-template-columns: 171px 1fr auto
     justify-content: space-between
     gap: 160px
+    @media all and ($m)
+      grid-template-columns: 1fr
+      justify-items: center
   &__links
     display: grid
     grid-template-columns: repeat(2, 1fr)
@@ -15,6 +18,8 @@
     justify-content: start
     align-items: start
     justify-items: start
+    @media all and ($m)
+      display: none
   &__link
     white-space: nowrap
     font-weight: 600
@@ -39,6 +44,8 @@
     display: grid
     gap: 18px
     align-items: start
+    @media all and ($m)
+      display: none
     .header__top-link-text
       color: #fff
       strong
@@ -56,15 +63,31 @@
   &__box
     display: grid
     justify-content: space-between
-    gap: 10px
     grid-auto-flow: column
     align-items: center
+    justify-content: start
+    justify-items: start
+    @media all and ($l)
+      grid-auto-flow: row
+      justify-content: start
+      gap: 10px
+    @media all and ($s)
+      justify-content: center
+      justify-items: center
   &__text
     font-weight: 400
-    font-size: 13px
+    font-size: 12px
     line-height: 114%
     color: #555
     position: relative
+    @media all and ($s)
+      text-align: center
+    &.copy
+      padding-right: 5px
+      @media all and ($l)
+        padding-right: 0
+        &::before
+          display: none
     &.footer-feedback
       display: grid
       grid-auto-flow: column
@@ -103,15 +126,28 @@
         transition: opacity $anim
       &:hover::after
         opacity: 1
+      @media all and ($l)
+        padding-left: 10px
+        &:first-child
+          padding-left: 0
     &::before
       position: absolute
       content: ''
       display: grid
       width: 1px
       height: 100%
-      left: -12px
+      right: 0
       justify-items: start
       background: #555
-    &:first-child
+    &:last-child
       &::before
         display: none
+
+  &__links
+    display: flex
+    align-items: center
+    justify-content: center
+    .footer-bottom__text
+      padding: 0 5px
+    @media all and ($m)
+      flex-wrap: wrap

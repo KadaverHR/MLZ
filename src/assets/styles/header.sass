@@ -1,7 +1,9 @@
 .header
   &__top
     background: #fff
-    padding: 19px
+    padding: 19px 0
+    @media all and ($s)
+      padding: 13px 0
   &__top-box
     display: grid
     grid-auto-flow: column
@@ -10,6 +12,15 @@
     @media all and ($m)
       grid-template-columns: repeat(3, 1fr)
       gap: 35px
+    @media all and ($s)
+      grid-template-columns: repeat(2, 1fr)
+      gap: 30px
+  &__top-logo
+    display: grid
+    img
+      @media all and ($s)
+        width: 139px
+        object-fit: cover
   &__top-contacts
     display: grid
     gap: 10px
@@ -17,9 +28,13 @@
     justify-content: start
     @media all and ($m)
       justify-content: center
+    @media all and ($s)
+      justify-content: end
     &:last-child
       @media all and ($m)
         justify-self: end
+      @media all and ($s)
+        display: none
   &__top-link
     display: grid
     gap: 5px
@@ -35,6 +50,12 @@
       display: grid
       width: 24px
       height: 24px
+      @media all and ($s)
+        width: 18px
+        height: 18px
+        background-size: contain
+    @media all and ($s)
+      gap: 10px
     &.phone
       background: url(/assets/img/phone.svg) no-repeat left center
     &.mail
@@ -67,6 +88,9 @@
       position: absolute
       opacity: 0
       transition: opacity $anim
+    @media all and ($s)
+      font-size: 14px
+      line-height: 129%
   &__top-input
     border: 1px solid #dbdcde
     border-radius: 5px
@@ -204,13 +228,12 @@
 .header-mobile
   display: none
   padding: 19px 0
-  display: grid
   gap: 30px
   grid-template-columns: 27px 1fr
   @media all and ($m)
     display: grid
-  .header__top-search
-    display: grid
+    .header__top-search
+      display: grid
   .header__top-input
     padding: 7px 10px
   &__box
@@ -253,7 +276,7 @@
 .catalog-mobile
   &__navigation
     display: grid
-
+    margin-bottom: 35px
   &__logo
     display: grid
     gap: 20px
@@ -316,10 +339,61 @@
     color: #fff
     text-decoration: none
     transition: color $anim
-    padding: 15px 0
+    padding: 15px 0 18px 15px
     border-bottom: 1px solid #727584
+    position: relative
+    &::before
+      content: ''
+      width: 8px
+      height: 8px
+      background: $orange
+      position: absolute
+      left: 0
+      top: 50%
+      transform: translateY(-50%)
+      opacity: 0
+      transition: opacity $anim
+      border-radius: 50%
     &:active, &:hover, &:focus
       color: $orange
+    &:active, &:hover, &:focus
+      &::before
+        opacity: 1
+  &__btn-box
+    display: grid
+    gap: 18px
+  &__btn
+    display: grid
+    font-weight: 600
+    font-size: 15px
+    line-height: 160%
+    text-transform: uppercase
+    color: #0d0d0e
+    align-items: center
+    justify-content: center
+    border-radius: 5px
+    position: relative
+    grid-auto-flow: column
+    gap: 5px
+    padding: 9px 12px
+    max-height: 42px
+    &::before
+      content: ''
+      width: 25px
+      height: 25px
+      background-size: contain
+    &.orange
+      background: $orange
+      color: #fff
+      font-weight: 700
+    &.white-btn
+      background: #fff
+    &.calculator
+      &::before
+        background: url(/assets/img/calc.svg) no-repeat center center
+    &.compare
+      &::before
+        background: url(/assets/img/compare.svg) no-repeat center center
 
 .stop-scroll
   overflow: hidden
@@ -329,6 +403,9 @@
   max-height: 0
   overflow: hidden
   transition: max-height 0.3s ease-out
+  &.panel-sub
+    .catalog-mobile__catalog-link
+      padding-left: 60px
 
 .accordion-mob
   border-bottom: 1px solid #727584
@@ -351,7 +428,7 @@
     right: 0
     top: 50%
     transform: translateY(-50%)
-  &.active 
+  &.active
     border: 0
 
 .catalog-drop
