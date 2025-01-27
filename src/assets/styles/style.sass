@@ -12,7 +12,6 @@
     border-top: 1px solid #d6d6d6
     width: 100%
   @media all and ($l)
-    max-width: 991px
     padding-left: 31px
     padding-right: 31px
   @media all and ($m)
@@ -21,34 +20,13 @@
   @media all and ($s)
     padding-left: 16px
     padding-right: 16px
-  &--swiper
-    max-width: 1480px
-    display: flex
-    margin: 0 auto
-    position: relative
-    @media all and ($l)
-      max-width: 1021px
-      padding-left: 31px
-      padding-right: 31px
-    @media all and ($m)
-      // max-width: 797px
-      padding-left: 24px
-      padding-right: 24px
-    @media all and ($s)
-      padding-left: 1px
-      padding-right: 1px
-    .swiper-wrapper
-      max-width: 1130px
-      margin-left: auto
-      margin-right: auto
-      position: relative
-      .swiper-slide
-        padding: 0 15px
+  
 body
   line-height: 1.2
   margin: 0
   position: relative
   font-family: $font-family
+  overflow: hidden
 
 ul
   list-style-type: none

@@ -7,11 +7,19 @@
     grid-auto-flow: column
     gap: 40px
     grid-template-columns: repeat(2, auto) 1fr auto
+    @media all and ($m)
+      grid-template-columns: repeat(3, 1fr)
+      gap: 35px
   &__top-contacts
     display: grid
     gap: 10px
     align-items: center
     justify-content: start
+    @media all and ($m)
+      justify-content: center
+    &:last-child
+      @media all and ($m)
+        justify-self: end
   &__top-link
     display: grid
     gap: 5px
@@ -69,6 +77,9 @@
     display: grid
     align-items: center
     align-self: center
+    @media all and ($m)
+      display: none
+
   &__top-submit
     display: grid
     position: absolute
@@ -84,6 +95,8 @@
     background: #4c555e
 
 .nav
+  @media all and ($m)
+    display: none
   &__list
     display: grid
     grid-auto-flow: column
@@ -187,3 +200,169 @@
 
 .mobile_top_level
   display: none
+
+.header-mobile
+  display: none
+  padding: 19px 0
+  display: grid
+  gap: 30px
+  grid-template-columns: 27px 1fr
+  @media all and ($m)
+    display: grid
+  .header__top-search
+    display: grid
+  .header__top-input
+    padding: 7px 10px
+  &__box
+    display: grid
+    padding: 20px 16px
+    background: #4C555E
+    position: absolute
+    left: 0
+    height: 100vh
+    width: 100%
+
+.header-btm-mob
+  display: none
+  background: #5D6877
+  padding: 5px 0
+  @media all and ($s)
+    display: block
+  &__box
+    display: grid
+    grid-auto-flow: column
+    grid-template-rows: 1fr
+    grid-template-columns: 18px auto
+    gap: 20px
+  .header-btm__search--mob
+    display: none
+    @media all and ($s)
+      display: grid
+      max-width: none
+    .search-area
+      width: 100%
+      max-width: none
+      position: relative
+      visibility: visible
+      transform: translateY(-50%)
+      top: 50%
+    .search__input
+      padding: 5px 10px
+    .search
+      border: 1px solid #AAB2C2
+.catalog-mobile
+  &__navigation
+    display: grid
+
+  &__logo
+    display: grid
+    gap: 20px
+    grid-auto-flow: column
+    justify-content: space-between
+    grid-template-columns: 1fr
+    img
+      max-width: 236px
+  &__logo-link
+    display: grid
+    justify-content: start
+    padding-bottom: 17px
+    border-bottom: 1px solid #fff
+  &__logo-close
+    background: none
+    position: absolute
+    right: 16px
+    top: 23px
+    img
+      width: 18px
+      height: 18px
+  &__container
+    position: fixed
+    align-content: start
+    left: 0
+    top: 0
+    width: 100%
+    height: 100vh
+    z-index: 1000
+    padding-top: 15px
+    background-color: #292d38
+    position: absolute
+    display: grid
+    overflow-y: auto
+    visibility: hidden
+    transform: translateX(-120%)
+    transition: visibility 0.3s ease-in-out, transform 0.3s ease-in-out
+  &__container.active
+    visibility: visible
+    transform: none
+  &__menu-link
+    font-weight: 600
+    font-size: 14px
+    text-transform: uppercase
+    color: #fff
+    text-decoration: none
+    &:active, &:hover, &:focus
+      color: $orange
+  &__button
+    padding: 15px 0
+    border-bottom: 1px solid #727584
+  &__links
+    display: grid
+    gap: 10px
+    padding: 15px 30px
+  &__catalog-link
+    font-weight: 400
+    font-size: 15px
+    line-height: 120%
+    color: #fff
+    text-decoration: none
+    transition: color $anim
+    padding: 15px 0
+    border-bottom: 1px solid #727584
+    &:active, &:hover, &:focus
+      color: $orange
+
+.stop-scroll
+  overflow: hidden
+
+.panel
+  display: grid
+  max-height: 0
+  overflow: hidden
+  transition: max-height 0.3s ease-out
+
+.accordion-mob
+  border-bottom: 1px solid #727584
+  cursor: pointer
+  width: 100%
+  text-align: left
+  outline: none
+  position: relative
+  transition: color $anim
+  border-radius: 0
+  margin-top: 0
+  &::before
+    content: ""
+    position: absolute
+    background: url(../../assets/img/arrow-mob.svg)
+    width: 14px
+    height: 8px
+    background-repeat: no-repeat
+    background-position: center
+    right: 0
+    top: 50%
+    transform: translateY(-50%)
+  &.active 
+    border: 0
+
+.catalog-drop
+  position: absolute
+  display: none
+  z-index: 999
+  padding-top: 20px
+  &__container
+    display: grid
+    grid-auto-flow: column
+    align-items: start
+
+    @media all and ($s)
+      display: none
