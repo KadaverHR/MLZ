@@ -1,0 +1,107 @@
+{% set title = "Контакты" %}
+{% set bodyClass = "contacts" %}
+{% extends "layouts/default.html" %}
+
+{% block content %}
+
+<article data-aos="fade-up" data-aos-duration="800" data-aos-easing="ease-in-sine"
+  class="contacts-page grey start-page">
+  <div class="container">
+
+    {% include "includes/breadcrumbs.html" %}
+
+    {% include "includes/title.html" %}
+
+    <div class="contacts-page__box">
+      <div class="contacts-page__block">
+        <div class="contacts-page__block-box">
+          <h3 class="contacts-page__title">
+            Адрес завода и склада
+          </h3>
+          <p class="contacts-page__block-text map ">
+            303032, Орловская область, г.Мценск, ул.Автомагистраль, дом № 1А/2, комната 301
+          </p>
+        </div>
+        <div class="contacts-page__block-box">
+          <h3 class="contacts-page__title">
+            Режим работы
+          </h3>
+          <p class="contacts-page__block-text clock ">
+            Пн-Пт с 09.00 до 18.00
+          </p>
+
+          <a class="contacts-page__map-link" href="#map">
+            Схема проезда
+          </a>
+        </div>
+      </div>
+      <div class="contacts-page__block">
+        <div class="contacts-page__block-box">
+          <h3 class="contacts-page__title">
+            Название отдела
+          </h3>
+          <div class="contacts-page__link-box">
+            <a type="tel" href="tel:+74952910914" class="contacts-page__block-text tel ">
+              +7 (495) 291-09-14
+            </a>
+            <a type="mail" href="mailto:info@ezks-mp.ru" class="contacts-page__block-text mail ">
+              info@ezks-mp.ru
+            </a>
+          </div>
+        </div>
+        <div class="contacts-page__block-box">
+          <h3 class="contacts-page__title">
+            Название отдела
+          </h3>
+          <div class="contacts-page__link-box">
+            <a type="tel" href="tel:+74952910914" class="contacts-page__block-text tel ">
+              +7 (495) 291-09-14
+            </a>
+            <a type="mail" href="mailto:info@ezks-mp.ru" class="contacts-page__block-text mail ">
+              info@ezks-mp.ru
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="contacts-page__map-box">
+      <div class="contacts-page__map" id="map">
+      </div>
+    </div>
+  </div>
+</article>
+
+<article data-aos="fade-up" data-aos-duration="800" data-aos-easing="ease-in-sine" class="feedback">
+  <div class="container">
+    <h2 class="title">
+      Задать нам вопрос
+    </h2>
+
+    <div class="feedback__box">
+      <p class="feedback__text">
+        Чтобы получить ответы на свои вопросы, заполните форму ниже. Наши менеджеры свяжутся с вами в ближайшее время
+      </p>
+      <form class="feedback__form contacts-feedback__form" action="">
+        <div class="contacts-feedback__input-box">
+          <input class="feedback__input name" required type="text" placeholder="Имя*">
+          <input class="feedback__input phone" required type="tel" placeholder="Телефон*">
+          <input class="feedback__input email" required type="email" placeholder="Email*">
+          <textarea rows="3" class="feedback__input contacts-feedback__textarea comment" placeholder="Введите сообщение" name=""
+            id=""></textarea>
+        </div>
+        <p class="contacts-feedback__required-text">*Поля, обязательные для заполнения</p>
+        <button class="feedback__btn" type="submit">Отправить</button>
+      </form>
+      <p class="feedback__form-text">
+        Отправляя форму, вы соглашаетесь на <a class=" feedback__form-link" href="http://" class="feedback__form-link">
+          обработку персональных
+          данных</a>
+      </p>
+    </div>
+  </div>
+</article>
+
+
+
+{% endblock %}

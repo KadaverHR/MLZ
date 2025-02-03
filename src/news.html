@@ -1,0 +1,44 @@
+{% set title = "Новости" %}
+<!-- {% set bodyClass = "news-page" %} -->
+{% extends "layouts/default.html" %}
+
+{% block content %}
+
+
+<article data-aos="fade-up" data-aos-duration="800" data-aos-easing="ease-in-sine" class="news-page grey start-page">
+  <div class="container">
+
+    {% include "includes/breadcrumbs.html" %}
+
+    {% include "includes/title.html" %}
+
+    <ul class="news-page__list">
+      {% for i in range(0, 15) %}
+      <li class="news-page__item">
+        {% set newsImgLink = "../assets/img/news1.jpg" %}
+        {% set newsTitle = "Сортовой прокат в соответствии с установленными стандартами" %}
+        {% set newsText = "27/03/2020 начат монтаж новой плавильной вакуумной печи ИСВ-200 ёмкостью 200 кг.Ввод в строй
+        данной печи позволит
+        существенно повысить качество продукции и производительность плавильного участка по вакуумному литью. Также
+        планируется
+        пополнение 27/03/2020 начат монтаж новой плавильной вакуумной печи ИСВ-200 ёмкостью 200 кг.Ввод в строй данной
+        печи позволит
+        существенно повысить качество продукции и производительность плавильного участка по вакуумному литью. Также
+        планируется
+        пополнение" %}
+        {% set newsDate = "25 Апреля 2022" %}
+        {% include "includes/news-page-card.html" %}
+      </li>
+      {% endfor %}
+    </ul>
+
+
+    <button class="btn-more">
+      Показать ещё
+    </button>
+
+
+  </div>
+</article>
+
+{% endblock %}

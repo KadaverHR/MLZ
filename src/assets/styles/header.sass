@@ -1,4 +1,6 @@
 .header
+  position: relative
+  z-index: 2
   &__top
     background: #fff
     padding: 19px 0
@@ -164,6 +166,7 @@
     &:hover
       .nav__link ~ .nav__subnav-list
         display: grid
+        z-index: 3
 
   &__link
     font-weight: 600

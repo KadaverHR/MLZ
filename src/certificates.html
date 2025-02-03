@@ -1,0 +1,37 @@
+{% set title = "Сертификаты" %}
+{% set bodyClass = "certificates" %}
+{% extends "layouts/default.html" %}
+
+{% block content %}
+
+
+
+
+
+<article data-aos="fade-up" data-aos-duration="800" data-aos-easing="ease-in-sine"
+  class="certificates-page white start-page">
+  <div class="container">
+
+    {% include "includes/breadcrumbs.html" %}
+
+    {% include "includes/title.html" %}
+
+    <ul class="certificates-page__list">
+      {% for i in range(0, 15) %}
+      <li class="certificates-page__item">
+        {% set imgLink = "../assets/img/cert.jpg" %}
+        {% set certText = "Сводная ведомость результатов проведения специальной оценки условий труда" %}
+        {% include "includes/certificate-card.html" %}
+      </li>
+      {% endfor %}
+    </ul>
+
+
+    <button class="btn-more">
+      Показать ещё
+    </button>
+
+  </div>
+</article>
+
+{% endblock %}

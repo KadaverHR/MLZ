@@ -1,4 +1,10 @@
 <div class="breadcrumbs">
-    <a class="breadcrumbs__link" href="http://">Главная</a>
+
+    <a class="breadcrumbs__link arrow" href="http://">Главная</a>
+    {% if subTitle %}
+    <a class="breadcrumbs__link arrow" href="http://">{{ title }}</a>
+    <p class="breadcrumbs__title">{{ subTitle }}</p>
+    {% else %}
     <p class="breadcrumbs__title">{{ title }}</p>
+    {% endif %}
 </div>
