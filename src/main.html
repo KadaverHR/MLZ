@@ -1,0 +1,273 @@
+{% set title = "Ссылки" %}
+{% set bodyClass = "link" %}
+
+{% extends "layouts/default.html" %}
+
+{% block content %}
+
+
+
+{% include "includes/banner.html" %}
+<main>
+  <article data-aos="fade-up" data-aos-duration="800" data-aos-easing="ease-in-sine" class="grey products">
+    <div class="container">
+      <div class="title__link-box">
+        <h2 class="title">Продукция</h2>
+        <a href="/products/" class="title__link">Перейти в каталог</a>
+      </div>
+
+
+      <ul class="list product__list">
+        <li class="item product__item">
+          {% set productTitle = "Проволока" %}
+          {% set imgLink = "../assets/img/product1.jpg" %}
+          {% set desc = "Каталог сплавов для производства проволоки с описанием и характеристиками
+          Это не анонс !!!!" %}
+          {% include "includes/product-card.html" %}
+        </li>
+        <li class="item product__item">
+          {% set productTitle = "Прут/Круг" %}
+          {% set imgLink = "../assets/img/product2.jpg" %}
+          {% set desc = "Сортовой прокат в соответствии с установленными стандартами" %}
+          {% include "includes/product-card.html" %}
+        </li>
+        <li class="item product__item">
+          {% set productTitle = "Слитки" %}
+          {% set imgLink = "../assets/img/product3.jpg" %}
+          {% set desc = "Сортовой прокат в соответствии с установленными стандартами" %}
+          {% include "includes/product-card.html" %}
+        </li>
+        <li class="item product__item">
+          {% set productTitle = "Полоса" %}
+          {% set imgLink = "../assets/img/product4.jpg" %}
+          {% set desc = "Сортовой прокат в соответствии с установленными стандартами" %}
+          {% include "includes/product-card.html" %}
+        </li>
+        <li class="item product__item">
+          {% set productTitle = "Лента/Фольга" %}
+          {% set imgLink = "../assets/img/product5.jpg" %}
+          {% set desc = "Сортовой прокат в соответствии с установленными стандартами" %}
+          {% include "includes/product-card.html" %}
+        </li>
+        <li class="item product__item">
+          {% set productTitle = "Трубы" %}
+          {% set imgLink = "../assets/img/product6.jpg" %}
+          {% set desc = "Сортовой прокат в соответствии с установленными стандартами" %}
+          {% include "includes/product-card.html" %}
+        </li>
+      </ul>
+    </div>
+  </article>
+
+  <article data-aos="fade-up" data-aos-duration="800" data-aos-easing="ease-in-sine" class="white advantages">
+    <div class="container">
+      <div class="title__link-box">
+        <h2 class="title">Наши преимущества</h2>
+      </div>
+
+      <ul class="advantages__list">
+        <li class="advantages__item">
+          {% set imgLink = "../assets/img/ad1.svg" %}
+          {% set advantagesText = "Широкий ассортимент продукции на собственных складах" %}
+          {% include "includes/advantages-card.html" %}
+        </li>
+        <li class="advantages__item">
+          {% set imgLink = "../assets/img/ad2.svg" %}
+          {% set advantagesText = "Сертифицированная продукция «РТ-Техприемка»" %}
+          {% include "includes/advantages-card.html" %}
+        </li>
+        <li class="advantages__item">
+          {% set imgLink = "../assets/img/ad3.svg" %}
+          {% set advantagesText = "Многолетний опыт научных изысканий
+          и исследований" %}
+          {% include "includes/advantages-card.html" %}
+        </li>
+        <li class="advantages__item">
+          {% set imgLink = "../assets/img/ad4.svg" %}
+          {% set advantagesText = "Оптимальные сроки поставки независимо от внешних обстоятельств" %}
+          {% include "includes/advantages-card.html" %}
+        </li>
+        <li class="advantages__item">
+          {% set imgLink = "../assets/img/ad5.svg" %}
+          {% set advantagesText = "Производим аналоги зарубежных сплавов" %}
+          {% include "includes/advantages-card.html" %}
+        </li>
+      </ul>
+    </div>
+  </article>
+
+  <article data-aos="fade-up" data-aos-duration="800" data-aos-easing="ease-in-sine" class="grey products">
+    <div class="container">
+      <div class="title__link-box">
+        <h2 class="title">Услуги</h2>
+        <a href="/products/" class="title__link">Перейти в каталог</a>
+      </div>
+
+
+      <ul class="list product__list">
+        <li class="item product__item">
+          {% set productTitle = "Плавка" %}
+          {% set imgLink = "../assets/img/product7.jpg" %}
+          {% set desc = "Каталог сплавов для производства проволоки с описанием и характеристиками
+          Это не анонс !!!!" %}
+          {% include "includes/product-card.html" %}
+        </li>
+        <li class="item product__item">
+          {% set productTitle = "Ковка" %}
+          {% set imgLink = "../assets/img/product8.jpg" %}
+          {% set desc = "Сортовой прокат в соответствии с установленными стандартами" %}
+          {% include "includes/product-card.html" %}
+        </li>
+        <li class="item product__item">
+          {% set productTitle = "Прокат" %}
+          {% set imgLink = "../assets/img/product9.jpg" %}
+          {% set desc = "Сортовой прокат в соответствии с установленными стандартами" %}
+          {% include "includes/product-card.html" %}
+        </li>
+        <li class="item product__item">
+          {% set productTitle = "Термообработка" %}
+          {% set imgLink = "../assets/img/product10.jpg" %}
+          {% set desc = "Сортовой прокат в соответствии с установленными стандартами" %}
+          {% include "includes/product-card.html" %}
+        </li>
+        <li class="item product__item">
+          {% set productTitle = "Волочение" %}
+          {% set imgLink = "../assets/img/product11.jpg" %}
+          {% set desc = "Сортовой прокат в соответствии с установленными стандартами" %}
+          {% include "includes/product-card.html" %}
+        </li>
+        <li class="item product__item">
+          {% set productTitle = "Испытание материалов" %}
+          {% set imgLink = "../assets/img/product12.jpg" %}
+          {% set desc = "Сортовой прокат в соответствии с установленными стандартами" %}
+          {% include "includes/product-card.html" %}
+        </li>
+      </ul>
+    </div>
+  </article>
+
+  <article data-aos="fade-up" data-aos-duration="800" data-aos-easing="ease-in-sine" class="white about">
+    <div class="container">
+      <div class="about__box">
+        <div class="about__left">
+          <div class="title__link-box">
+            <h2 class="title">О Заводе</h2>
+          </div>
+          <div class="about__text-box">
+            <p class="about__text strong">
+              Наука, желание, труд и упорство - наша формула успеха. Мы энтузиасты своего дела.
+            </p>
+            <p class="about__text">
+              В настоящее время завод Мценскпрокат, сохранивший и преумноживший, технологическую базу и производственную
+              культуру завода ЭЗКС, является одним из немногих российских предприятий, которые,имеют возможность вести
+              опытно-экспериментальную работу.
+            </p>
+          </div>
+          <div class="about__link-box">
+            <a href="/about/" class="about__link-btn ">О компании</a>
+            <a href="/about/#about_video" class="about__link-btn dashed">Презентация</a>
+          </div>
+        </div>
+        <div class="about__img-box">
+          <img class="about__img" src="../assets/img/about.jpg" alt="">
+          <div class="about__img-desc orange">
+            <p class="about__img-text-count">
+              150+
+            </p>
+            <div class="about__img-text">
+              Ассортимент продукции завода представлен более чем ста видами сплавов.
+            </div>
+          </div>
+          <div class="about__img-desc dark-grey">
+            <p class="about__img-text-count">
+              150+
+            </p>
+            <div class="about__img-text">
+              Ассортимент продукции завода представлен более чем ста видами сплавов.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <article data-aos="fade-up" data-aos-duration="800" data-aos-easing="ease-in-sine" class="calc">
+    <div class="container">
+      <h2 class="title">
+        Калькулятор металлопроката
+      </h2>
+      <div class="calc__box">
+        <div class="calc__text-box">
+          <p class="calc__text">
+            Удобный инструмент для расчета весовых показателей цветного и нержавеющего металлопроката в зависимости от
+            его
+            размеров инструмент для расчета весовых показателей цветного и нержавеющего металлопроката
+          </p>
+        </div>
+        <button class="calc__btn">
+          Открыть калькулятор
+        </button>
+      </div>
+    </div>
+  </article>
+
+  {% set newsSectionTitle = "Новости"%}
+  {% include "includes/news-section.html" %}
+
+  <article data-aos="fade-up" data-aos-duration="800" data-aos-easing="ease-in-sine" class="partners white">
+    <div class="container">
+      <div class="title__link-box">
+        <h2 class="title">
+          Наши партнеры
+        </h2>
+      </div>
+    </div>
+    <div class="container">
+      <ul id="partnersCarousel" class="partners__list">
+        <li class="partners__item active">
+          <img class="partners__img" src="../assets/img/partner1.png" alt="">
+        </li>
+        <li class="partners__item active">
+          <img class="partners__img" src="../assets/img/partner1.png" alt="">
+        </li>
+        <li class="partners__item active">
+          <img class="partners__img" src="../assets/img/partner1.png" alt="">
+        </li>
+        <li class="partners__item active">
+          <img class="partners__img" src="../assets/img/partner1.png" alt="">
+        </li>
+        <li class="partners__item active">
+          <img class="partners__img" src="../assets/img/partner1.png" alt="">
+        </li>
+      </ul>
+    </div>
+  </article>
+
+  <!-- <article data-aos="fade-up" data-aos-duration="800" data-aos-easing="ease-in-sine" class="feedback">
+  <div class="container">
+    <h2 class="title">
+      Нужно больше информации?
+    </h2>
+
+    <div class="feedback__box">
+      <p class="feedback__text">
+        Чтобы получить ответы на свои вопросы, заполните форму ниже. Наши менеджеры свяжутся с вами в ближайшее время
+      </p>
+      <form class="feedback__form" action="">
+        <input class="feedback__input" type="text" placeholder="Имя">
+        <input class="feedback__input" type="text" placeholder="Телефон или email">
+        <button class="feedback__btn" type="submit">Отправить</button>
+      </form>
+      <p class="feedback__form-text">
+        Отправляя форму, вы соглашаетесь на <a class=" feedback__form-link" href="http://" class="feedback__form-link">
+          обработку персональных
+          данных</a>
+      </p>
+    </div>
+  </div>
+</article> -->
+  {% include "includes/feedback.html" %}
+
+
+</main>
+{% endblock %}

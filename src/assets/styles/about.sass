@@ -34,6 +34,8 @@
       max-height: 430px
     @media all and ($s)
       grid-template-columns: 1fr
+    &.presentation
+      grid-template-columns: 1fr
   &__link-btn
     text-align: center
     padding: 15px 40px
@@ -100,3 +102,39 @@
     font-size: 18px
     line-height: 144%
     color: #fff
+
+.about-page
+  &__banner
+    background: url(/assets/img/about-banner.jpg) no-repeat center top / cover
+    min-height: 496px
+    display: grid
+    justify-content: center
+    align-items: center
+    @media all and ($m)
+      min-height: 345px
+    @media all and ($s)
+      min-height: 208px
+  .title
+    color: #fff
+    text-align: center
+  .title__link-box
+    margin-bottom: 0
+  &__presentation-btn
+    padding: 15px
+    width: 100%
+    background: $orange
+    font-weight: 700
+    font-size: 15px
+    color: #fff
+    border-radius: 5px
+    text-transform: uppercase
+    transition: background $anim
+    &:hover
+      background: $orange-hover
+  &__text
+    font-weight: 400
+    font-size: 18px
+    line-height: 144%
+    color: #201d19
+    &.top-text
+      

@@ -27,6 +27,7 @@ body
   position: relative
   font-family: $font-family
   overflow-x: hidden
+  min-height: 100vh
 
 ul
   list-style-type: none
@@ -132,6 +133,15 @@ input, textarea
     @media all and ($s)
       font-size: 15px
       line-height: 87%
+  &__subtitle
+    font-weight: 700
+    font-size: 44px
+    line-height: 100%
+    letter-spacing: -0.02em
+    color: #323538
+    @media all and ($s)
+      font-size: 27px
+      line-height: 137%
 
 .list
   display: grid
@@ -161,3 +171,8 @@ input, textarea
     width: calc((100% - 60px) / 2)
   @media all and ($xs)
     width: 100%
+
+
+.start-page
+  padding-top: 0 !important
+  margin-top: 20px

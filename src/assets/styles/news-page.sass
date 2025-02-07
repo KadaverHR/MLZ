@@ -48,10 +48,93 @@
     color: #1f232e
     margin-top: 30px
     margin-bottom: 20px
+  h3
+    font-weight: 700
+    font-size: 21px
+    line-height: 176%
+    color: #1f232e
+    margin-top: 30px
+    margin-bottom: 15px
   ul
-  li
+    display: grid
+    gap: 10px
+    margin-left: 15px
+    margin-top: 20px
+    margin-bottom: 20px
+    li
+      font-weight: 400
+      font-size: 16px
+      line-height: 137%
+      color: #0d0d0e
+      position: relative
+      grid-auto-flow: column
+      align-items: start
+      justify-content: start
+      gap: 5px
+      padding-left: 15px
+      &::before
+        content: ''
+        width: 8px
+        height: 8px
+        background: #e0580c
+        border-radius: 50%
+        display: grid
+        top: 5px
+        left: 0
+        position: absolute
+      ul
+        margin-top: 0
+        margin-bottom: 0
+        li::before
+          border: 1px solid #e0580c
+          background: #fff
+  ol
+    display: grid
+    gap: 10px
+
+    margin-top: 20px
+    margin-bottom: 20px
+    padding-inline-start: 0
+    padding-left: 27px
+    margin-block-start: 20px
+    margin-block-end: 20px
+    li
+      font-weight: 400
+      font-size: 16px
+      line-height: 137%
+      color: #0d0d0e
+      position: relative
+      gap: 5px
+      &::marker
+        font-weight: 700
+        color: #0d0d0e
+  p
     font-weight: 400
     font-size: 16px
     line-height: 137%
     color: #0d0d0e
-    
+    margin-bottom: 10px
+  strong
+    font-weight: 600
+  i
+    font-style: italic
+  table
+    margin-top: 20px
+    margin-bottom: 20px
+    width: 100%
+    max-width: 1100px
+    border-collapse: collapse
+    th
+      background: #fff3ec
+      border: 1px solid #adafb5
+      text-align: start
+      padding: 5px
+      p
+        font-weight: 700
+        margin-bottom: 0
+    td
+      padding: 5px
+      background: #fff3ec
+      border: 1px solid #adafb5
+      p
+        margin-bottom: 0

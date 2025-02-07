@@ -1,0 +1,44 @@
+<article data-aos="fade-up" data-aos-duration="800" data-aos-easing="ease-in-sine" class="news grey">
+  <div class="container">
+    <div class="title__link-box">
+
+      {% if newsSectionTitle %}
+
+      <h3 class="title__subtitle">
+        {{newsSectionTitle}}
+      </h3>
+      {% else %}
+      <h2 class="title">Новости</h2>
+      {% endif %}
+      <a href="/news" class="title__link">Все новости</a>
+    </div>
+  </div>
+  <div class="container">
+    <ul class="news__list news-carousel">
+      <li class="news__item">
+        {% set newsImgLink = "../assets/img/news1.jpg" %}
+        {% set newsTitle = "Сортовой прокат в соответствии с установленными стандартами" %}
+        {% set newsDate = "25 Апреля 2022" %}
+        {% include "includes/news-card.html" %}
+      </li>
+      <li class="news__item">
+        {% set newsImgLink = "../assets/img/news1.jpg" %}
+        {% set newsTitle = "Сортовой прокат в соответствии с установленными стандартами" %}
+        {% set newsDate = "25 Апреля 2022" %}
+        {% include "includes/news-card.html" %}
+      </li>
+      <li class="news__item">
+        {% set newsImgLink = "../assets/img/news1.jpg" %}
+        {% set newsTitle = "Сортовой прокат в соответствии с установленными стандартами" %}
+        {% set newsDate = "25 Апреля 2022" %}
+        {% include "includes/news-card.html" %}
+      </li>
+      <li class="news__item">
+        {% set newsImgLink = "../assets/img/news1.jpg" %}
+        {% set newsTitle = "Сортовой прокат в соответствии с установленными стандартами" %}
+        {% set newsDate = "25 Апреля 2022" %}
+        {% include "includes/news-card.html" %}
+      </li>
+    </ul>
+  </div>
+</article>

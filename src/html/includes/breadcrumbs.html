@@ -1,10 +1,14 @@
-<div class="breadcrumbs">
+<section data-aos="fade-right" data-aos-duration="800" data-aos-easing="ease-in-sine" class="breadcrumbs__box">
+  <div class="container">
+    <div class="breadcrumbs">
 
-    <a class="breadcrumbs__link arrow" href="http://">Главная</a>
-    {% if subTitle %}
-    <a class="breadcrumbs__link arrow" href="http://">{{ title }}</a>
-    <p class="breadcrumbs__title">{{ subTitle }}</p>
-    {% else %}
-    <p class="breadcrumbs__title">{{ title }}</p>
-    {% endif %}
-</div>
+      <a class="breadcrumbs__link arrow" href="http://">Главная</a>
+      {% if subTitle %}
+      <a class="breadcrumbs__link arrow" href="http://">{{ title }}</a>
+      <p class="breadcrumbs__title">{{ subTitle }}</p>
+      {% else %}
+      <p class="breadcrumbs__title">{{ title }}</p>
+      {% endif %}
+    </div>
+  </div>
+</section>

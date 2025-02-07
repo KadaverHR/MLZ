@@ -1,0 +1,75 @@
+{% set title = "О компании" %}
+{% extends "layouts/default.html" %}
+
+{% block content %}
+
+<main class="white">
+  {% include "includes/breadcrumbs.html" %}
+  <article data-aos="fade-up" data-aos-duration="800" data-aos-easing="ease-in-sine" class="about-page start-page">
+    <section class="about-page__banner">
+      <div class="container">
+        {% include "includes/title.html" %}
+      </div>
+    </section>
+    <section class="about-page__content">
+      <div class="container">
+
+        <p class="about-page__text start-page top-text">
+          В настоящее время завод Мценскпрокат, сохранивший и преумноживший, технологическую базу и производственную
+          культуру
+          завода ЭЗКС, является одним из немногих российских предприятий, которые, наряду с производством типовой
+          продукции, имеют
+          возможность вести опытно-экспериментальную работу.
+        </p>
+
+        <div class="about__box">
+          <div class="about__left">
+            <div class="title__link-box">
+              <h2 class="title">О Заводе</h2>
+            </div>
+            <div class="about__text-box">
+              <p class="about__text strong">
+                Наука, желание, труд и упорство - наша формула успеха. Мы энтузиасты своего дела.
+              </p>
+              <p class="about__text">
+                В настоящее время завод Мценскпрокат, сохранивший и преумноживший, технологическую базу и
+                производственную
+                культуру завода ЭЗКС, является одним из немногих российских предприятий, которые,имеют возможность вести
+                опытно-экспериментальную работу.
+              </p>
+            </div>
+            <div class="about__link-box presentation">
+
+              <button class="about-page__presentation-btn">
+                Смотреть презентацию о нас
+              </button>
+              <!-- <a href="/about/" class="about__link-btn ">О компании</a>
+              <a href="/about/#about_video" class="about__link-btn dashed">Презентация</a> -->
+            </div>
+          </div>
+          <div class="about__img-box">
+            <img class="about__img" src="../assets/img/about.jpg" alt="">
+            <div class="about__img-desc orange">
+              <p class="about__img-text-count">
+                150+
+              </p>
+              <div class="about__img-text">
+                Ассортимент продукции завода представлен более чем ста видами сплавов.
+              </div>
+            </div>
+            <div class="about__img-desc dark-grey">
+              <p class="about__img-text-count">
+                150+
+              </p>
+              <div class="about__img-text">
+                Ассортимент продукции завода представлен более чем ста видами сплавов.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </article>
+</main>
+
+{% endblock %}
