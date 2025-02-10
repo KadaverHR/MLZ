@@ -94,12 +94,10 @@ $(document).ready(function () {
       }
     ]
   });
-  function initSlider() {
+  function initSlider(slider) {
     if ($(window).width() < 992) {
-      console.log($(window).width());
-
       // Инициализация слайдера, если ширина экрана меньше 992px
-      $('.news-carousel').slick({
+      $(slider).slick({
         slidesToShow: 2,
         slidesToScroll: 1,
         autoplay: true,
@@ -118,62 +116,64 @@ $(document).ready(function () {
       });
     } else {
       // Уничтожение слайдера, если ширина экрана больше или равна 992px
-      if ($('.news-carousel').hasClass('slick-initialized')) {
-        $('.news-carousel').slick('unslick');
+      if ($(slider).hasClass('slick-initialized')) {
+        $(slider).slick('unslick');
       }
     }
   }
 
   // Инициализация слайдера при загрузке страницы
-  initSlider();
+  initSlider('.news-carousel');
+  initSlider('.about-slider');
 
   // Инициализация слайдера при изменении размера окна
   $(window).resize(function () {
-    initSlider();
+    initSlider('.news-carousel');
+    initSlider('.about-slider');
   });
 
 
   AOS.init();
 
 
-
-
   ///map
 
-  ymaps.ready(function () {
-    var myMap = new ymaps.Map('map', {
-      center: [53.271363, 36.548694],
-      zoom: 14
-    }, {
-      searchControlProvider: 'yandex#search'
-    }),
-
-      // Создаём макет содержимого.
-      MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
-        '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
-      ),
-
-      myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
-        // hintContent: 'Собственный значок метки',
-        // balloonContent: 'Это красивая метка'
+  if (document.getElementById('map')) {
+    ymaps.ready(function () {
+      var myMap = new ymaps.Map('map', {
+        center: [53.271363, 36.548694],
+        zoom: 14
       }, {
-        // Опции.
-        // Необходимо указать данный тип макета.
-        iconLayout: 'default#image',
-        // Своё изображение иконки метки.
-        iconImageHref: 'assets/img/map2.svg',
-        // Размеры метки.
-        iconImageSize: [30, 42],
-        // Смещение левого верхнего угла иконки относительно
-        // её "ножки" (точки привязки).
-        iconImageOffset: [-5, -38]
-      })
+        searchControlProvider: 'yandex#search'
+      }),
+
+        // Создаём макет содержимого.
+        MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+          '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
+        ),
+
+        myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+          // hintContent: 'Собственный значок метки',
+          // balloonContent: 'Это красивая метка'
+        }, {
+          // Опции.
+          // Необходимо указать данный тип макета.
+          iconLayout: 'default#image',
+          // Своё изображение иконки метки.
+          iconImageHref: 'assets/img/map2.svg',
+          // Размеры метки.
+          iconImageSize: [30, 42],
+          // Смещение левого верхнего угла иконки относительно
+          // её "ножки" (точки привязки).
+          iconImageOffset: [-5, -38]
+        })
 
 
 
-    myMap.geoObjects.add(myPlacemark)
+      myMap.geoObjects.add(myPlacemark)
 
-  });
+    });
+  }
 
 });
 

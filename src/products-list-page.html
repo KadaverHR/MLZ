@@ -1,0 +1,165 @@
+{% set title = "Продукция" %}
+{% extends "layouts/default.html" %}
+
+{% block content %}
+
+<main class="white">
+  {% include "includes/breadcrumbs.html" %}
+
+
+  <article data-aos="fade-up" data-aos-duration="800" data-aos-easing="ease-in-sine"
+    class="products-list-page start-page">
+    <div class="container">
+      {% include "includes/title.html" %}
+
+      <ul class="list product__list">
+        <li class="item product__item">
+          {% set productTitle = "Проволока" %}
+          {% set imgLink = "../assets/img/product1.jpg" %}
+          {% set desc = "Каталог сплавов для производства проволоки с описанием и характеристиками
+          Это не анонс !!!!" %}
+          {% include "includes/product-card.html" %}
+        </li>
+        <li class="item product__item">
+          {% set productTitle = "Прут/Круг" %}
+          {% set imgLink = "../assets/img/product2.jpg" %}
+          {% set desc = "Сортовой прокат в соответствии с установленными стандартами" %}
+          {% include "includes/product-card.html" %}
+        </li>
+        <li class="item product__item">
+          {% set productTitle = "Слитки" %}
+          {% set imgLink = "../assets/img/product3.jpg" %}
+          {% set desc = "Сортовой прокат в соответствии с установленными стандартами" %}
+          {% include "includes/product-card.html" %}
+        </li>
+        <li class="item product__item">
+          {% set productTitle = "Полоса" %}
+          {% set imgLink = "../assets/img/product4.jpg" %}
+          {% set desc = "Сортовой прокат в соответствии с установленными стандартами" %}
+          {% include "includes/product-card.html" %}
+        </li>
+        <li class="item product__item">
+          {% set productTitle = "Лента/Фольга" %}
+          {% set imgLink = "../assets/img/product5.jpg" %}
+          {% set desc = "Сортовой прокат в соответствии с установленными стандартами" %}
+          {% include "includes/product-card.html" %}
+        </li>
+        <li class="item product__item">
+          {% set productTitle = "Трубы" %}
+          {% set imgLink = "../assets/img/product6.jpg" %}
+          {% set desc = "Сортовой прокат в соответствии с установленными стандартами" %}
+          {% include "includes/product-card.html" %}
+        </li>
+        <li class="item product__item">
+          {% set productTitle = "Лист" %}
+          {% set imgLink = "../assets/img/product13.jpg" %}
+          {% set desc = "Сортовой прокат в соответствии с установленными стандартами" %}
+          {% include "includes/product-card.html" %}
+        </li>
+        <li class="item product__item">
+          {% set productTitle = "Поковки" %}
+          {% set imgLink = "../assets/img/product14.jpg" %}
+          {% set desc = "Сортовой прокат в соответствии с установленными стандартами" %}
+          {% include "includes/product-card.html" %}
+        </li>
+        <li class="item product__item product-item-feedback">
+          <div class="product-card">
+            <div class="product-card__feedback-box">
+              <button class="product-card__feedback-btn">Оставьте заявку</button>
+              <p class="product-card__feedback-text">И наш специалист свяжется с вами в течении дня</p>
+            </div>
+            <img class="product-card__img" src="../assets/img/product15.jpg">
+          </div>
+        </li>
+      </ul>
+
+    </div>
+  </article>
+
+  <article class="grey">
+    <div class="container">
+      <div class="title__link-box ">
+        <h2 class="title__subtitle">
+          Параметры металлопроката
+        </h2>
+      </div>
+
+      <div class="ctn_table_metal_param">
+        <div class="table_content_metal_param">
+          <table class="table_general_metal_param">
+            <thead class="thead_table">
+              <tr class="table_tr">
+                <th class="table_th">Наименование</th>
+                <th class="table_th">Толщина, мм</th>
+                <th class="table_th">Ширина, мм</th>
+                <th class="table_th">Вес, кг</th>
+                <th class="table_th">Диаметр, мм</th>
+                <th class="table_th">Длина, мм</th>
+                <th class="table_th">Виды отделки</th>
+              </tr>
+            </thead>
+            <tbody class="tbody_table">
+              <tr class="table_tr">
+                <td class="text_td">Продукция 1-2</td>
+                <td class="text_td">18 - 23</td>
+                <td class="text_td">18 - 23</td>
+                <td class="text_td">100-120</td>
+                <td class="text_td">12312</td>
+                <td class="text_td">1232</td>
+                <td class="text_td">32131</td>
+              </tr>
+
+              <tr class="table_tr">
+                <td class="text_td">Продукция 1-1</td>
+                <td class="text_td">18 - 23</td>
+                <td class="text_td">18 - 23</td>
+                <td class="text_td">100-120</td>
+                <td class="text_td"></td>
+                <td class="text_td"></td>
+                <td class="text_td"></td>
+              </tr>
+
+              <tr class="table_tr">
+                <td class="text_td">Продукция 2</td>
+                <td class="text_td">18 - 23</td>
+                <td class="text_td">18 - 23</td>
+                <td class="text_td">100-120</td>
+                <td class="text_td"></td>
+                <td class="text_td"></td>
+                <td class="text_td"></td>
+              </tr>
+
+              <tr class="table_tr">
+                <td class="text_td">Продукция3</td>
+                <td class="text_td">18 - 23</td>
+                <td class="text_td">18 - 23</td>
+                <td class="text_td">100-120</td>
+                <td class="text_td"></td>
+                <td class="text_td"></td>
+                <td class="text_td"></td>
+              </tr>
+
+              <tr class="table_tr">
+                <td class="text_td">Продукция4</td>
+                <td class="text_td">18 - 23</td>
+                <td class="text_td">18 - 23</td>
+                <td class="text_td">100-120</td>
+                <td class="text_td"></td>
+                <td class="text_td"></td>
+                <td class="text_td"></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+
+
+
+    </div>
+  </article>
+</main>
+
+
+
+{% endblock %}
