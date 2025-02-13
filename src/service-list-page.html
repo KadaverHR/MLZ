@@ -1,0 +1,61 @@
+{% set title = "Услуги" %}
+{% extends "layouts/default.html" %}
+
+{% block content %}
+
+<main class="white">
+  {% include "includes/breadcrumbs.html" %}
+
+
+  <article data-aos="fade-up" data-aos-duration="800" data-aos-easing="ease-in-sine"
+    class="products-list-page start-page">
+    <div class="container">
+      {% include "includes/title.html" %}
+      <ul class="list product__list">
+        <li class="item product__item">
+          {% set productTitle = "Плавка" %}
+          {% set imgLink = "../assets/img/product7.jpg" %}
+          {% set desc = "Каталог сплавов для производства проволоки с описанием и характеристиками
+          Это не анонс !!!!" %}
+          {% include "includes/product-card.html" %}
+        </li>
+        <li class="item product__item">
+          {% set productTitle = "Ковка" %}
+          {% set imgLink = "../assets/img/product8.jpg" %}
+          {% set desc = "Сортовой прокат в соответствии с установленными стандартами" %}
+          {% include "includes/product-card.html" %}
+        </li>
+        <li class="item product__item">
+          {% set productTitle = "Прокат" %}
+          {% set imgLink = "../assets/img/product9.jpg" %}
+          {% set desc = "Сортовой прокат в соответствии с установленными стандартами" %}
+          {% include "includes/product-card.html" %}
+        </li>
+        <li class="item product__item">
+          {% set productTitle = "Термообработка" %}
+          {% set imgLink = "../assets/img/product10.jpg" %}
+          {% set desc = "Сортовой прокат в соответствии с установленными стандартами" %}
+          {% include "includes/product-card.html" %}
+        </li>
+        <li class="item product__item">
+          {% set productTitle = "Волочение" %}
+          {% set imgLink = "../assets/img/product11.jpg" %}
+          {% set desc = "Сортовой прокат в соответствии с установленными стандартами" %}
+          {% include "includes/product-card.html" %}
+        </li>
+        <li class="item product__item">
+          {% set productTitle = "Испытание материалов" %}
+          {% set imgLink = "../assets/img/product12.jpg" %}
+          {% set desc = "Сортовой прокат в соответствии с установленными стандартами" %}
+          {% include "includes/product-card.html" %}
+        </li>
+      </ul>
+
+    </div>
+  </article>
+
+</main>
+
+
+
+{% endblock %}

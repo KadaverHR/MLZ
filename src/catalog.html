@@ -1,0 +1,43 @@
+{% set title = "Каталог" %}
+{% extends "layouts/default.html" %}
+
+{% block content %}
+
+<main class="white">
+  {% include "includes/breadcrumbs.html" %}
+
+  <div class="container">
+    <section class="catalog__area start-page">
+      <aside сlass="catalog-filters">
+        <nav class="catalog-filters__nav">
+          <ul class="catalog-filters__list">
+            {% for category in catalogFilter %}
+            <li class="catalog-filter__item">
+              <p class="catalog-filter__title">
+                {{ category.title }}
+              </p>
+              <ul class="catalog-filter__nav-list">
+                {% for item in category.item %}
+                <li class="catalog-filter__nav-item">
+                  <a class="catalog-filter__nav-link" href="http://">
+                    {{ item }}
+                  </a>
+                </li>
+                {% endfor %}
+              </ul>
+            </li>
+            {% endfor %}
+          </ul>
+
+        </nav>
+      </aside>
+
+      <article class="catalog-content">
+
+      </article>
+
+    </section>
+  </div>
+
+</main>
+{% endblock %}

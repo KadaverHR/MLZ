@@ -1,0 +1,31 @@
+.catalog
+  &__area
+    display: grid
+    grid-template-columns: 249px 1fr
+    gap: 30px
+
+.catalog-filter
+  &__item
+    border-radius: 0
+    overflow: hidden
+    &:first-child
+      border-radius: 5px 5px 0 0
+    &:last-child
+      border-radius: 0 0 5px 5px
+  &__title
+    padding: 12px 20px
+    background: #676e76
+    font-weight: 600
+    font-size: 18px
+    line-height: 115%
+    color: #fff
+    position: relative
+    display: grid
+    justify-content: space-between
+    grid-template-columns: auto 13px
+    gap: 10px
+    &::after
+      content: ""
+      background: url(assets/img/arrows_category_top.svg)
+  &__nav-list
+    display: none

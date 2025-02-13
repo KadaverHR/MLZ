@@ -2391,9 +2391,9 @@ camelcase@^3.0.0:
   integrity sha512-4nhGqUkc4BqbBBB4Q6zLuD7lzzrHYrjKGeYaEji/3tFR5VdJu9v+LilhGIVe8wxEJPPOeWo7eg8dwY13TZ1BNg==
 
 caniuse-lite@^1.0.30001335, caniuse-lite@^1.0.30001349:
-  version "1.0.30001355"
-  resolved "https://registry.npmjs.org/caniuse-lite/-/caniuse-lite-1.0.30001355.tgz"
-  integrity sha512-Sd6pjJHF27LzCB7pT7qs+kuX2ndurzCzkpJl6Qct7LPSZ9jn0bkOA8mdgMgmqnQAWLVOOGjLpc+66V57eLtb1g==
+  version "1.0.30001699"
+  resolved "https://registry.npmjs.org/caniuse-lite/-/caniuse-lite-1.0.30001699.tgz"
+  integrity sha512-b+uH5BakXZ9Do9iK+CkDmctUSEqZl+SP056vc5usa0PL+ev5OHw003rZXcnjNDv3L8P5j6rwT6C0BPKSikW08w==
 
 caw@^2.0.0, caw@^2.0.1:
   version "2.0.1"
@@ -2703,6 +2703,13 @@ concat-stream@^1.5.0, concat-stream@^1.6.0:
     inherits "^2.0.3"
     readable-stream "^2.2.2"
     typedarray "^0.0.6"
+
+concat-with-sourcemaps@^1.0.0:
+  version "1.1.0"
+  resolved "https://registry.npmjs.org/concat-with-sourcemaps/-/concat-with-sourcemaps-1.1.0.tgz"
+  integrity sha512-4gEjHJFT9e+2W/77h/DS5SGUgwDaOwprX8L/gl5+3ixnzkVJJsZWDSelmN3Oilw3LNDZjZV0yqH1hLG3k6nghg==
+  dependencies:
+    source-map "^0.6.1"
 
 config-chain@^1.1.11:
   version "1.1.13"
@@ -4566,6 +4573,15 @@ gulp-cli@^2.2.0, gulp-cli@^2.3.0:
     v8flags "^3.2.0"
     yargs "^7.1.0"
 
+gulp-concat@^2.6.1:
+  version "2.6.1"
+  resolved "https://registry.npmjs.org/gulp-concat/-/gulp-concat-2.6.1.tgz"
+  integrity sha512-a2scActrQrDBpBbR3WUZGyGS1JEPLg5PZJdIa7/Bi3GuKAmPYDK6SFhy/NZq5R8KsKKFvtfR0fakbUCcKGCCjg==
+  dependencies:
+    concat-with-sourcemaps "^1.0.0"
+    through2 "^2.0.0"
+    vinyl "^2.0.0"
+
 gulp-csso@^4.0.1:
   version "4.0.1"
   resolved "https://registry.npmjs.org/gulp-csso/-/gulp-csso-4.0.1.tgz"
@@ -4574,6 +4590,15 @@ gulp-csso@^4.0.1:
     csso "^4.0.0"
     plugin-error "^1.0.0"
     vinyl-sourcemaps-apply "^0.2.1"
+
+gulp-data@^1.3.1:
+  version "1.3.1"
+  resolved "https://registry.npmjs.org/gulp-data/-/gulp-data-1.3.1.tgz"
+  integrity sha512-fvpQJvgVyhkwRcFP3Y9QUS9sWvIFsAlJDinQjhLuknmHZz52jH0gHmTujYBFjr9aTlTHlrAayY5m1d0tA1HzGQ==
+  dependencies:
+    plugin-error "^0.1.2"
+    through2 "^2.0.0"
+    util-extend "^1.0.1"
 
 gulp-fonter@^0.3.0:
   version "0.3.0"
@@ -9285,6 +9310,11 @@ util-deprecate@^1.0.1, util-deprecate@~1.0.1:
   version "1.0.2"
   resolved "https://registry.npmjs.org/util-deprecate/-/util-deprecate-1.0.2.tgz"
   integrity sha512-EPD5q1uXyFxJpCrLnCc1nHnq3gOa6DZBocAIiI2TaSCA7VCJ1UJDMagCzIkXNsUYfD1daK//LTEQ8xiIbrHtcw==
+
+util-extend@^1.0.1:
+  version "1.0.3"
+  resolved "https://registry.npmjs.org/util-extend/-/util-extend-1.0.3.tgz"
+  integrity sha512-mLs5zAK+ctllYBj+iAQvlDCwoxU/WDOUaJkcFudeiAX6OajC6BKXJUa9a+tbtkC11dz2Ufb7h0lyvIOVn4LADA==
 
 util.promisify@~1.0.0:
   version "1.0.1"
