@@ -3,7 +3,7 @@
 
 {% block content %}
 
-<main class="white">
+<main class="grey">
   {% include "includes/breadcrumbs.html" %}
 
   <div class="container">
@@ -12,19 +12,21 @@
         <nav class="catalog-filters__nav">
           <ul class="catalog-filters__list">
             {% for category in catalogFilter %}
-            <li class="catalog-filter__item">
-              <p class="catalog-filter__title">
+            <li class="catalog-filter__item js-accordion">
+              <p class="catalog-filter__title ">
                 {{ category.title }}
               </p>
-              <ul class="catalog-filter__nav-list">
-                {% for item in category.item %}
-                <li class="catalog-filter__nav-item">
-                  <a class="catalog-filter__nav-link" href="http://">
-                    {{ item }}
-                  </a>
-                </li>
-                {% endfor %}
-              </ul>
+              <div class="panel">
+                <ul class="catalog-filter__nav-list">
+                  {% for item in category.item %}
+                  <li class="catalog-filter__nav-item">
+                    <a class="catalog-filter__nav-link" href="http://">
+                      {{ item }}
+                    </a>
+                  </li>
+                  {% endfor %}
+                </ul>
+              </div>
             </li>
             {% endfor %}
           </ul>

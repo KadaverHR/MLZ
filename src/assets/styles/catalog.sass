@@ -5,27 +5,74 @@
     gap: 30px
 
 .catalog-filter
+  &__list
+
   &__item
     border-radius: 0
     overflow: hidden
-    &:first-child
-      border-radius: 5px 5px 0 0
-    &:last-child
-      border-radius: 0 0 5px 5px
+    background: #fff
+    &:is(&.active)
+      &:first-child
+        border-radius: 5px 5px 0 0
+      &:last-child
+        border-radius: 0 0 5px 5px
+    &.active
+      .catalog-filter__title
+        background: #676e76
+        color: #fff
+        font-weight: 600
+        border-bottom: 0
+        &:first-child
+          border-top: 0
+      &::after
+        content: ""
+        background: url(/assets/img/arrow-mob.svg) no-repeat center center
   &__title
     padding: 12px 20px
-    background: #676e76
-    font-weight: 600
-    font-size: 18px
+    font-weight: 400
+    color: #0d0d0e
+    font-size: 16px
     line-height: 115%
-    color: #fff
     position: relative
     display: grid
     justify-content: space-between
     grid-template-columns: auto 13px
     gap: 10px
+    cursor: pointer
+    border-top: 1px solid #b7bbbe
+    &:last-child
+      border-bottom: 1px solid #b7bbbe
     &::after
       content: ""
-      background: url(assets/img/arrows_category_top.svg)
+      background: url(/assets/img/arrow-grey.svg) no-repeat center center
+
   &__nav-list
-    display: none
+    display: grid
+    padding: 10px 15px
+    background: #fff
+    gap: 10px
+  &__nav-link
+    font-weight: 400
+    font-size: 16px
+    line-height: 137%
+    color: #0d0d0e
+    display: grid
+    gap: 10px
+    grid-template-columns: 6px auto
+    position: relative
+    align-items: center
+    transition: font-weight $anim
+    &::before
+      content: ""
+      width: 8px
+      height: 8px
+      border-top: 1.5px solid rgb(103, 110, 118)
+      border-right: 1.5px solid rgb(103, 110, 118)
+      transform: rotate(-135deg)
+      transition: border $anim
+    &:hover, &:active, &:focus
+      font-weight: 700
+      &::before
+        color: rgb(234, 95, 18)
+        border-top: 2px solid rgb(234, 95, 18)
+        border-right: 2px solid rgb(234, 95, 18)

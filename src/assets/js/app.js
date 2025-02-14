@@ -52,20 +52,27 @@ $(document).ready(function () {
   });
 
   ///
-  const acc = document.getElementsByClassName("accordion-mob");
+  const mobileNav = document.querySelectorAll(".accordion-mob");
   let i = 0;
 
-  for (i = 0; i < acc.length; i++) {
-    acc[i].addEventListener("click", function () {
-      this.classList.toggle("active");
-      const panel = this.nextElementSibling;
-      if (panel.style.maxHeight) {
-        panel.style.maxHeight = null;
-      } else {
-        panel.style.maxHeight = panel.scrollHeight + "px";
-      }
+  function accordion(list) {
+    list.forEach(e => {
+      e.addEventListener("click", function () {
+        this.classList.toggle("active");
+        const panel = this.querySelector('.panel');
+        if (panel.style.maxHeight) {
+          panel.style.maxHeight = null;
+        } else {
+          panel.style.maxHeight = panel.scrollHeight + "px";
+        }
+      });
     });
   }
+
+  const filterMenu = document.querySelectorAll('.js-accordion');
+
+  accordion(mobileNav);
+  accordion(filterMenu);
 
   //карусель 
 
@@ -126,14 +133,30 @@ $(document).ready(function () {
   initSlider('.news-carousel');
   initSlider('.about-slider');
 
+  ///анимация
+  AOS.init({
+    disable: function () {
+      var maxWidth = 992;
+      return window.innerWidth < maxWidth;
+    }
+  });
+
+
+
   // Инициализация слайдера при изменении размера окна
   $(window).resize(function () {
     initSlider('.news-carousel');
     initSlider('.about-slider');
+    AOS.init({
+      disable: function () {
+        var maxWidth = 992;
+        return window.innerWidth < maxWidth;
+      }
+    });
+
   });
 
 
-  AOS.init();
 
 
   ///map
@@ -174,6 +197,13 @@ $(document).ready(function () {
 
     });
   }
+
+
+  // 
+
+
+
+
 
 });
 

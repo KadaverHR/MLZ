@@ -17,7 +17,8 @@
           </a>
         </div>
 
-        <form data-aos="fade-left" data-aos-duration="1000" data-aos-easing="ease-in-sine" class="header__top-search" method="get" action="/search/">
+        <form data-aos="fade-left" data-aos-duration="1000" data-aos-easing="ease-in-sine" class="header__top-search"
+          method="get" action="/search/">
           <input class="header__top-input" type="text" name="q" placeholder="Поиск по сайту">
           <input type="submit" value="" class="header__top-submit">
         </form>
@@ -51,90 +52,31 @@
               <img src="assets/img/close.svg">
             </button>
           </div>
+
+
           <div class="catalog-mobile__navigation">
-            <div class="catalog-mobile__menu-link catalog-mobile__button accordion-mob">
-              Комания
-            </div>
-            <div class="panel">
-              <div class="catalog-mobile__links">
-                <a href="/" class="catalog-mobile__catalog-link">
-                  толстолистовой горячекатаный из электротехнической нелегированной стали ТУ 14-1-3070-80
-                </a>
-                <a href="/" class="catalog-mobile__catalog-link">
-                  Комания 2
-                </a>
-                <a href="/" class="catalog-mobile__catalog-link">
-                  Комания 3
-                </a>
-                <a href="/" class="catalog-mobile__catalog-link">
-                  Комания 4
-                </a>
-                <a href="/" class="catalog-mobile__catalog-link">
-                  Комания 5
-                </a>
-              </div>
-            </div>
-            <div class="catalog-mobile__button">
-              <a class="catalog-mobile__menu-link" href="http://">Продукция</a>
-            </div>
-            <div class="catalog-mobile__button">
-              <a class="catalog-mobile__menu-link" href="http://">Услуги</a>
-            </div>
+            <ul>
+              {% for menu in navList %}
+              <li class="catalog-mobile__menu-link catalog-mobile__button {% if menu.item %} accordion-mob {% endif %}">
+                {{ menu.title }}
 
-            <div class="catalog-mobile__menu-link catalog-mobile__button accordion-mob">
-              Марочник
-            </div>
-            <div class="panel">
-              <div class="catalog-mobile__links">
-                <a href="/" class="catalog-mobile__catalog-link">
-                  Комания 1
-                </a>
-                <a href="/" class="catalog-mobile__catalog-link">
-                  Комания 2
-                </a>
-                <a href="/" class="catalog-mobile__catalog-link">
-                  Комания 3
-                </a>
-                <a href="/" class="catalog-mobile__catalog-link">
-                  Комания 4
-                </a>
-                <a href="/" class="catalog-mobile__catalog-link">
-                  Комания 5
-                </a>
-              </div>
-            </div>
-            <div class="catalog-mobile__menu-link catalog-mobile__button accordion-mob">
-              Сплавы
-            </div>
-            <div class="panel">
-              <div class="catalog-mobile__links">
-                <a href="/" class="catalog-mobile__catalog-link">
-                  Комания 1
-                </a>
-                <a href="/" class="catalog-mobile__catalog-link">
-                  Комания 2
-                </a>
-                <a href="/" class="catalog-mobile__catalog-link">
-                  Комания 3
-                </a>
-                <a href="/" class="catalog-mobile__catalog-link">
-                  Комания 4
-                </a>
-                <a href="/" class="catalog-mobile__catalog-link">
-                  Комания 5
-                </a>
-              </div>
-            </div>
+                {% if menu.item %}
+                <div class="panel">
+                  <ul class=" catalog-mobile__links">
+                    {% for item in menu.item %}
 
-            <div class="catalog-mobile__button">
-              <a class="catalog-mobile__menu-link" href="http://">Статьи</a>
-            </div>
-            <div class="catalog-mobile__button">
-              <a class="catalog-mobile__menu-link" href="http://">Новости</a>
-            </div>
-            <div class="catalog-mobile__button">
-              <a class="catalog-mobile__menu-link" href="http://">Контакты</a>
-            </div>
+                    <a href="/" class="catalog-mobile__catalog-link">
+                      {{item}}
+                    </a>
+
+                    {% endfor %}
+                  </ul>
+                </div>
+                {% endif%}
+              </li>
+              {% endfor %}
+            </ul>
+
           </div>
           <div class="catalog-mobile__btn-box">
             <a class="catalog-mobile__btn calculator white-btn" href="http://"> Калькулятор</a>
