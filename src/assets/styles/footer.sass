@@ -39,7 +39,7 @@
       left: 50%
       transform: translateX(-50%)
       transition: opacity $anim
-    &:hover::before
+    &:hover::before, &:focus::before, &:active::before
       opacity: 1
   &__contacts
     display: grid
@@ -53,7 +53,7 @@
         font-weight: 400
     .header__top-link.map
       align-items: start
-      &:hover
+      &:hover, &:active, &:focus
         .header__top-link-text
           color: #fff
           &::after
@@ -94,13 +94,13 @@
       grid-auto-flow: column
       gap: 5px
       color: #0d0d0e
-      &:hover
+      &:hover, &:active, &:focus
         color: #0d0d0e
       & .link
         display: inline
         color: #0d0d0e
         transition: color $anim
-        &:hover
+        &:hover, &:active, &:focus
           color: $orange
         &::after
           content: ''
@@ -110,8 +110,9 @@
           background: $orange
           opacity: 0
           transition: opacity $anim
-        &:hover::after
-          opacity: 1
+        &:hover, &:active, &:focus
+          &::after
+            opacity: 1
     &.link
       color: #0d0d0e
       transition: color $anim

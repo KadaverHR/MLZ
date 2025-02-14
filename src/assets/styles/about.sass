@@ -49,7 +49,7 @@
     transition: background $anim, border $anim, color $anim
     &.dashed
       border: 1px dashed #85909d
-    &:hover
+    &:hover, &:active, &:focus
       color: #fff
       background: $orange
       border: 1px solid $orange
@@ -130,7 +130,7 @@
     border-radius: 5px
     text-transform: uppercase
     transition: background $anim
-    &:hover
+    &:hover, &:active, &:focus
       background: $orange-hover
   &__text
     font-weight: 400
