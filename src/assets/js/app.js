@@ -2,6 +2,20 @@ $(document).ready(function () {
   // Год
   $("#year").text(new Date().getFullYear());
 
+
+  /// Высота страницы
+
+
+  function vh() {
+    let vh = window.innerHeight
+    let headerHeight = $(".header").height();
+    let footerHeight = $(".footer").height();
+
+    let mainHeight = vh - headerHeight - footerHeight;
+    $("main").css("min-height", mainHeight + "px");
+  }
+
+  vh()
   // SVG
   const replaceSvg = () => {
     $(".svg").each(function () {
@@ -219,6 +233,7 @@ $(document).ready(function () {
   $(window).resize(function () {
     initSlider('.news-carousel');
     initSlider('.about-slider');
+    vh();
     AOS.init({
       disable: function () {
         var maxWidth = 992;
