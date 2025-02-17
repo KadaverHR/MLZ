@@ -14,7 +14,167 @@
     text-align: center
   .title__link-box
     margin-bottom: 0
-  .vacancy__contact-select-box
+  &__contact-select-box
+    display: grid
     .select2-container .select2-selection--single .select2-selection__rendered
       padding: 0 10px
       background: #f4f4f4
+  &__area
+    display: grid
+    grid-template-columns: 291px 1fr
+    gap: 30px
+    align-items: start
+    @media all and ($s)
+      grid-template-columns: 1fr
+  &__contact-title
+    font-weight: 700
+    font-size: 21px
+    line-height: 129%
+    color: #0d0d0e
+    @media  all and ($m)
+      font-size: 18px
+  &__contact-box, &__contact-form-box
+    padding: 20px
+    background: #fff
+    border-radius: 5px
+    display: grid
+  &__contact
+    display: grid
+    gap: 10px
+    padding: 20px 0
+    border-bottom: 1px solid #d6d6d6
+    &:first-child
+      padding-top: 0
+    &:last-child
+      padding-bottom: 0
+      border-bottom: 0
+  &__contact-link
+    display: grid
+    gap: 5px
+    grid-auto-flow: column
+    align-items: center
+    position: relative
+    justify-content: start
+    justify-items: start
+    font-weight: 400
+    font-size: 15px
+    line-height: 120%
+    color: #0d0d0e
+    transition: color 0.3s ease-in-out
+    position: relative
+    &::before
+      content: ""
+      display: grid
+      width: 24px
+      height: 24px
+    &.tel
+      &::before
+        background: url(/assets/img/phone.svg) no-repeat center center
+    &.mail
+      &::before
+        background: url(/assets/img/mail.svg) no-repeat center center
+    &:active, &:hover, &:focus
+      color: $orange
+  &__box-left
+    display: grid
+    gap: 20px
+  &__contact-form-box
+    display: grid
+    gap: 20px
+  &__contact-form
+    display: grid
+    gap: 10px
+    grid-template-rows: repeat(3, 1fr)
+  &__contact-input
+    border: 1px solid #b7bbbe
+    border-radius: 3px
+    padding: 1px 10px
+    font-weight: 400
+    font-size: 15px
+    background: #f4f4f4
+  &__contact-form-text
+    font-style: italic
+    font-weight: 400
+    font-size: 13px
+    line-height: 123%
+    color: #312c2b
+  &__contact-form-btn
+    display: grid
+    padding: 12px
+    background: #ea5f12
+    border-radius: 5px
+    font-weight: 600
+    font-size: 15px
+    line-height: 87%
+    text-align: center
+    color: #fff
+    transition: background $anim
+    text-transform: uppercase
+    &:hover, &:active, &:focus
+      background: rgb(208, 82, 12)
+  &__list
+    display: grid
+    gap: 30px
+  &__item
+    display: grid
+    gap: 20px
+    padding: 20px
+    background: #fff
+    border-radius: 5px
+  &__item-title
+    font-weight: 700
+    font-size: 29px
+    line-height: 128%
+    color: #ea5f12
+    @media  all and ($m)
+      font-size: 23px
+    @media  all and ($s)
+      font-size: 21px
+  &__item-text
+    font-weight: 400
+    font-size: 24px
+    line-height: 112%
+    color: #1f232e
+    @media  all and ($m)
+      font-size: 21px
+    @media  all and ($s)
+      font-size: 18px
+  &__list-box
+    display: grid
+    gap: 30px
+  &__desc
+    display: grid
+    gap: 10px
+  &__desc-title
+    font-weight: 700
+    font-size: 21px
+    line-height: 129%
+    color: #1f232e
+    @media  all and ($m)
+      font-size: 18px
+  &__desc-list
+    display: grid
+    gap: 10px
+  &__desc-item
+    padding-left: 15px
+    font-weight: 400
+    font-size: 16px
+    line-height: 137%
+    color: #0d0d0e
+    display: grid
+    gap: 10px
+    align-items: start
+    grid-auto-flow: column
+    justify-content: start
+    &::before
+      content: ''
+      position: relative
+      top: 7px
+      width: 8px
+      height: 8px
+      display: grid
+      border-radius: 50%
+      background: #ea5f12
+  &__item-title-box
+    display: grid
+    gap: 10px

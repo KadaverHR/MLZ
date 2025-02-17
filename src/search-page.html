@@ -1,0 +1,76 @@
+{% set title = "Поиск по сайту" %}
+{% extends "layouts/default.html" %}
+
+{% block content %}
+
+
+<main class="grey">
+  {% include "includes/breadcrumbs.html" %}
+
+  <div class="container">
+    <div class="search-page article start-page">
+      {% include "includes/title.html" %}
+
+      <div class="search-page__area">
+        <form class="search-page__form" action="">
+          <input class="search-page__input" type="text" placeholder="Поиск">
+          <button class="search-page__btn" type="submit">Найти</button>
+        </form>
+        <p class="search-page__text-result">
+          Найдено: 876
+        </p>
+
+
+        <ul class="search-page__result-list">
+
+          {% for i in range(0, 15) %}
+
+          <li class="search-page__result-item">
+            <a class="search-page__result-link" href="http://">
+              <p class="search-page__result-title">
+                83НФ
+              </p>
+              <p class="search-page__result-text">
+                Ввод в <strong>строй</strong> данной печи позволит существенно повысить качество продукции и
+                производительность
+                плавильного участка по вакуумному литью. Также планируется пополнение продуктовой линейки новыми
+                вакуумными сплавами и прокатом из них.
+              </p>
+            </a>
+          </li>
+
+          {% endfor %}
+        </ul>
+
+        <div class="pagination">
+          <ul class="pagination__list">
+            <li class="pagination__item">
+              <a class="pagination__link active" href="http://">
+                1
+              </a>
+            </li>
+            {% for i in range(1, 3) %}
+            <li class="pagination__item">
+              <a class="pagination__link" href="http://">
+                {{i+1}}
+              </a>
+            </li>
+            {% endfor %}
+            <li class="pagination__item">
+              <p class="pagination__text">...</p>
+            </li>
+            {% for i in range(10, 12) %}
+            <li class="pagination__item">
+              <a class="pagination__link" href="http://">
+                {{i+1}}
+              </a>
+            </li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+{% endblock %}

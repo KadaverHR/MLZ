@@ -1,0 +1,32 @@
+{% set title = "404 - Страница не найдена" %}
+{% extends "layouts/default.html" %}
+
+{% block content %}
+
+<main class="white error-page">
+  {% include "includes/breadcrumbs.html" %}
+  <section class="error" data-aos="fade-up" data-aos-duration="800" data-aos-easing="ease-in-sine">
+    <div class="container">
+      <div class="error__box">
+        <p class="subtitle">Страница не найдена</p>
+        <h1 class="title">404</h1>
+        <p class="error__text">Запрашиваемая страница была перенесена
+          или удалена. Но вы можете воспользоваться поиском</p>
+
+        <form class="search-page__form" action="">
+          <input class="search-page__input" type="text" placeholder="Поиск">
+          <button class="search-page__btn" type="submit">Найти</button>
+        </form>
+        <p class="error__text">А еще вы всегда можете вернуться на главную,
+          чтобы начать сначала</p>
+
+        <a class="error__link" href="http://">
+          Перейти на главную
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+
+
+{% endblock %}
