@@ -53,7 +53,8 @@
     "tippy",
     "slick",
     "aos",
-    "select2.min"
+    "select2.min", 
+    "fancybox"
     
   ],
   "libsJs": [
@@ -67,7 +68,8 @@
     "jquery.maskedinput.min.js",
     "slick.min.js",
     "tippy-bundle.umd.js",
-    "select2.min.js"
+    "select2.min.js", 
+    "fancybox.umd.js"
   ],
   "catalogFilter": [
     {

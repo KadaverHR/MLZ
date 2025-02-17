@@ -7,7 +7,7 @@
     gap: 30px
     grid-template-columns: repeat(2, 1fr)
     align-items: start
-    @media all and ($l)
+    @media all and ($m)
       grid-template-columns: 1fr
   &__cards
     display: grid
@@ -101,6 +101,10 @@
     border: 1px solid #dbdcde
     padding: 10px
     border-radius: 5px
+    &.mobile
+      display: none
+      @media all and ($m)
+        display: grid
   &__label-text
     font-weight: 400
     font-size: 15px
@@ -155,3 +159,4 @@
   &__right
     display: grid
     gap: 20px
+    

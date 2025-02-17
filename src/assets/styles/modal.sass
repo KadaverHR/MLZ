@@ -1,0 +1,58 @@
+.modal-order
+  display: grid
+  padding: 40px 30px
+  box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.15)
+  background: #fff
+  border-radius: 5px
+  cursor: default !important
+  transition: box-shadow $anim
+  max-width:  449px
+  &__form
+    display: grid
+    gap: 20px
+  &__input
+    border-radius: 3px
+    background: #f4f4f4
+    border: 1px solid #dbdcde
+    padding: 8px 10px
+    font-weight: 400
+    font-size: 15px
+    line-height: 130%
+    color: #0d0d0e
+  &__required
+    font-style: italic
+    font-weight: 400
+    font-size: 13px
+    line-height: 123%
+    color: #312c2b
+    margin-top: -10px
+  &__policy
+    font-weight: 400
+    font-size: 13px
+    line-height: 123%
+    color: #312c2b
+  &__btn
+    justify-self: center
+    display: grid
+    align-items: center
+    justify-content: center
+    border-radius: 5px
+    padding: 12px 18px
+    background: #ea5f12
+    font-weight: 700
+    font-size: 13px
+    text-transform: uppercase
+    text-align: center
+    color: #fff
+    transition: background $anim
+    margin-top: 5px
+    &:active, &:hover, &:focus
+      background: #ea5f12
+
+.fancybox__carousel.is-draggable .fancybox__slide, .fancybox__carousel.is-draggable .fancybox__slide .fancybox__content
+  cursor: default !important
+
+.fancybox__content > .carousel__button.is-close
+  color: #4c555e
+  right: 5px
+  top: 5px

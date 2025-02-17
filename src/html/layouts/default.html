@@ -36,6 +36,35 @@
   {% include "includes/footer.html" %}
 
 
+  <div class="modal-order" id="modal-order">
+    <form class="modal-order__form" action="">
+      <h2 class="modal-order__title">
+        Заказать продукцию
+      </h2>
+      <p class="modal-order__text">
+        Оставьте контактные данные и менеджер перезвонит Вам в ближайшее время.
+      </p>
+      <input required type="text" class="modal-order__input" placeholder="Имя">
+      <input required type="tel" class="modal-order__input" placeholder="Телефон">
+      <textarea rows="3" name="" id="" class="modal-order__input modal-order__textarea"
+        placeholder="Комментарии"></textarea>
+
+      <p class="modal-order__required">
+        *Поля, обязательные для заполнения
+      </p>
+
+      <label class="catalog-check" for="checkbox{{i}}">
+        <span class="catalog-check__span">
+          <input type="checkbox" name="checkbox{{i}}" id="checkbox{{i}}">
+        </span>
+        <p class="modal-order__policy">Согласие на обработку персональных данных</p>
+      </label>
+
+      <button class="modal-order__btn" type="submit"> Отправить</button>
+    </form>
+  </div>
+
+
   <!-- 
   <div class="btn-up btn-up__hide">
     <img src="assets/img/btn-top.svg" alt="">

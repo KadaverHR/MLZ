@@ -56,6 +56,9 @@ button
   cursor: pointer
   background: transparent
 
+textarea
+  resize: none
+
 .article
   padding-top: 40px
   padding-bottom: 65px
@@ -213,3 +216,7 @@ input, textarea
 .select2-container--default .select2-selection--single .select2-selection__arrow
   top: 50%
   transform: translateY(-50%)
+
+.mob-none
+  @media all and ($m)
+    display: none

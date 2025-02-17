@@ -6,7 +6,8 @@
 <main class="grey">
   {% include "includes/breadcrumbs.html" %}
 
-  <article data-aos="fade-up" data-aos-duration="800" data-aos-easing="ease-in-sine"  class="article calculator-page start-page">
+  <article data-aos="fade-up" data-aos-duration="800" data-aos-easing="ease-in-sine"
+    class="article calculator-page start-page">
     <div class="container">
       <div class="title__link-box">
         <h1 class="title">
@@ -76,6 +77,18 @@
                 <span class="calculator-page__label-text">мм</span>
               </label>
 
+
+              <label class="calculator-page__label mobile" for="input1">
+                <span class="calculator-page__label-text"> Вес</span>
+                <input type="text" id="input1" class="calculator-page__input" placeholder="0">
+                <span class="calculator-page__label-text">мм</span>
+              </label>
+              <label class="calculator-page__label mobile" for="input2">
+                <span class="calculator-page__label-text"> Длина </span>
+                <input type="text" id="input1" class="calculator-page__input" placeholder="0">
+                <span class="calculator-page__label-text">мм</span>
+              </label>
+
               <div class="calculator-page__btn-box">
                 <button class="calculator-page__btn">Рассчитать</button>
               </div>
@@ -84,7 +97,7 @@
 
           </form>
         </div>
-        <div class="calculator-page__form-box">
+        <div class="calculator-page__form-box mob-none">
           <p class="calculator-page__form-title">
             Труба
           </p>
@@ -109,6 +122,7 @@
         </div>
       </div>
   </article>
+
 
 </main>
 {% endblock %}
