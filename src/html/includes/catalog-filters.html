@@ -1,0 +1,43 @@
+<aside class="catalog-filter">
+  <nav class="catalog-filter__nav">
+    <button class="catalog-filter__mob-btn filter-mob">
+      Каталог сплавов
+    </button>
+    <div class="catalog-filter__mob-header">
+      <p class="catalog-filter__mob-title">
+        Каталог сплавов
+      </p>
+      <button class="catalog-filter__mob-close filter-mob-close">
+        <img src="assets/img/exit_mobile.svg" alt="Закрыть">
+      </button>
+    </div>
+    <ul class="catalog-filter__list">
+      {% for category in catalogFilter %}
+      <li class="catalog-filter__item js-accordion">
+        <p class="catalog-filter__title ">
+          {{ category.title }}
+        </p>
+        <div class="panel">
+          <ul class="catalog-filter__nav-list">
+            {% for item in category.item %}
+            <li class="catalog-filter__nav-item">
+              <a class="catalog-filter__nav-link" href="http://">
+                {{ item }}
+              </a>
+            </li>
+            {% endfor %}
+          </ul>
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
+  </nav>
+
+  <button class="catalog__btn calculator-btn">Калькулятор металлопроката
+  </button>
+  <!-- <button class="catalog__btn question-btn">
+      Задать вопрос
+    </button> -->
+  <button class="catalog__btn comparison-btn">Сравнение металлов
+  </button>
+</aside>

@@ -1,0 +1,36 @@
+<article class="catalog-add-compare">
+  <div class="title__link-box">
+    <h1 class="title">
+      Прецизионные магнито-мягкие сплавы
+    </h1>
+  </div>
+  <div class="catalog-add-compare__box">
+    <p class="catalog-add-compare__text">
+      Нелегированные и легированные двойные железоникелевые, железокобальтовые и железохромистые и тройные
+      железоникелькобальтовые сплавы с высокой магнитной проницаемостью и малой коэрцитивной силой.
+    </p>
+
+    <form class="catalog-add-compare__table-box">
+      <h2 class="catalog-add-compare__table-title">
+        Прецизионные магнито-мягкие сплавы
+      </h2>
+      <ul class="catalog-add-compare__table-list">
+        {% for i in range(0, 15) %}
+
+        <li class="catalog-add-compare__table-item">
+          <label class="catalog-check" for="checkbox{{i}}">
+            <span class="catalog-check__span">
+              <input type="checkbox" name="checkbox{{i}}" id="checkbox{{i}}">
+            </span>
+            <a class="catalog-check__table-link" href="http://">80НХС</a>
+          </label>
+        </li>
+        {% endfor %}
+      </ul>
+    </form>
+  </div>
+</article>
+
+<aside class="btn-compare__box">
+  <button class="btn-compare">сравнить</button>
+</aside>

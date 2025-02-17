@@ -1,0 +1,157 @@
+.calculator-page
+  &__area
+    padding: 20px 30px
+    background: #fff
+    border-radius: 5px
+    display: grid
+    gap: 30px
+    grid-template-columns: repeat(2, 1fr)
+    align-items: start
+    @media all and ($l)
+      grid-template-columns: 1fr
+  &__cards
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    gap: 20px
+    @media all and ($s)
+      display: flex
+      flex-wrap: wrap
+      justify-content: center
+  &__img-box
+    display: grid
+    border: 1px solid #b7bbbe
+    border-radius: 5px
+    align-items: center
+    justify-content: center
+    cursor: pointer
+    transition: border $anim
+  &__left
+    display: grid
+    gap: 20px
+  &__form-title
+    font-weight: 700
+    font-size: 21px
+    line-height: 176%
+    color: #1f232e
+    margin-bottom: 10px
+  &__card-title
+    font-weight: 400
+    font-size: 16px
+    line-height: 137%
+    color: #0d0d0e
+    text-align: center
+    transition: font-weight $anim
+  &__card
+    display: grid
+    gap: 10px
+    &.active, &:active, &:hover, &:focus
+      .calculator-page__img-box
+        border: 1px solid #ea5f12
+      .calculator-page__card-title
+        font-weight: 600
+  &__input-box
+    display: grid
+    padding: 20px
+    box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.15)
+    border-radius: 0 0 5px 5px
+    grid-template-rows: repeat(3, 1fr)
+    gap: 10px
+  &__select-box
+    display: grid
+    width: 100%
+    .select2-selection
+      background: #f4f4f4
+      border: 1px solid #dbdcde
+    .select2-search__field
+      border: 1px solid #dbdcde
+      border-radius: 5px
+    .select2-results__options
+      &::-webkit-scrollbar-thumb
+        background: rgb(234, 95, 18)
+      &::-webkit-scrollbar
+        width: 5px
+        height: 3px
+        background-color: rgb(183, 187, 190)
+    .select2-results__option--selected
+      background: rgb(234, 95, 18) !important
+      color: #fff !important
+    .select2-container--default .select2-results__option--highlighted.select2-results__option--selectable
+      background: #f4f4f4
+      color: #0d0d0e
+    .select2-container--open .select2-dropdown--below
+      box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.15)
+      background: #fff
+      border: 0
+    .select2-container .select2-selection--single
+      height: auto
+    .select2-container .select2-selection--single .select2-selection__rendered
+      padding-top: 6px
+      padding-bottom: 6px
+      font-weight: 400
+      font-size: 15px
+      color: #0d0d0e
+    .select2-container--default .select2-selection--single .select2-selection__arrow
+      top: 50%
+      transform: translateY(-50%)
+  &__label
+    display: grid
+    grid-template-columns: 0.6fr 1fr auto
+    gap: 10px
+    background: #f4f4f4
+    border: 1px solid #dbdcde
+    padding: 10px
+    border-radius: 5px
+  &__label-text
+    font-weight: 400
+    font-size: 15px
+    line-height: 130%
+    color: #0d0d0e
+  &__input
+    border: 1px solid #b7bbbe
+    border-radius: 3px
+    padding: 1px 10px
+    font-weight: 400
+    font-size: 15px
+    color: #727584
+    display: grid
+  &__btn-box
+    margin-top: 20px
+    display: grid
+    justify-content: center
+  &__input
+    width: 100%
+  &__btn
+    font-weight: 700
+    font-size: 15px
+    color: #fff
+    border-radius: 5px
+    padding: 15px 40px
+    background: #ea5f12
+    display: grid
+    align-items: center
+    justify-content: center
+    transition: background $anim
+    display: grid
+    text-transform: uppercase
+    gap: 10px
+    grid-template-columns: auto 18px
+    &:hover, &:active, &:focus
+      background: $orange-hover
+    &::after
+      content: ''
+      min-height: 16px
+      display: grid
+      background: url(/assets/img/calc-w.svg) no-repeat center center
+      background-size: contain
+  &__right-img-box
+    display: grid
+    border-radius: 5px
+    background: #fff
+    box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.15)
+  &__right-input-box
+    display: grid
+    gap: 20px
+    grid-template-columns: repeat(2, 1fr)
+  &__right
+    display: grid
+    gap: 20px

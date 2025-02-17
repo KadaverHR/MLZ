@@ -1,0 +1,66 @@
+.compare-page
+  &__list
+    display: flex
+    flex-wrap: wrap
+    gap: 30px 70px
+    justify-content: center
+    margin-bottom: 30px
+  &__item
+    display: grid
+    padding: 25px 35px
+    border-radius: 5px
+    border: 1px solid #b7bbbe
+    position: relative
+    &:nth-of-type(2n)
+      background: rgb(255, 239, 230)
+    &:nth-of-type(2n + 1)
+      background: rgb(237, 234, 255)
+    &::before
+      content: ""
+      background: url(/assets/img/comparison-g.svg) no-repeat center center
+      width: 31px
+      height: 36px
+      position: absolute
+      top: 50%
+      left: -53px
+      transform: translateY(-50%)
+    &:first-child
+      &::before
+        display: none
+    @media all and ($m)
+      padding: 25px 20px
+  &__link
+    font-weight: 700
+    font-size: 38px
+    line-height: 132%
+    letter-spacing: -0.03em
+    text-decoration: underline
+    color: #ff7e36
+    transition: color $anim
+    &:active, &:hover, &:focus
+      text-decoration: underline
+      color: #ea5f12
+    @media all and ($m)
+      font-size: 24px
+  &__item-close
+    max-width: 15px
+    max-height: 15px
+    display: grid
+    cursor: pointer
+    background: #ff7e36
+    padding: 4px
+    border-radius: 50%
+    position: absolute
+    right: 5px
+    top: 5px
+  &__tables
+    display: grid
+    gap: 30px
+    table
+      tbody
+        tr:nth-of-type(2n)
+          td
+            background: rgb(255, 239, 230)
+        tr:nth-of-type(2n+1)
+          td
+            background: rgb(237, 234, 255)

@@ -1,0 +1,20 @@
+.vacancy
+  &__banner
+    background: url(/assets/img/vacancy-banner.jpg) no-repeat center top / cover
+    min-height: 496px
+    display: grid
+    justify-content: center
+    align-items: center
+    @media all and ($m)
+      min-height: 345px
+    @media all and ($s)
+      min-height: 208px
+  .title
+    color: #fff
+    text-align: center
+  .title__link-box
+    margin-bottom: 0
+  .vacancy__contact-select-box
+    .select2-container .select2-selection--single .select2-selection__rendered
+      padding: 0 10px
+      background: #f4f4f4

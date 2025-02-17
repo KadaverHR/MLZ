@@ -1,0 +1,114 @@
+{% set title = "Калькулятор металлопроката" %}
+{% extends "layouts/default.html" %}
+
+{% block content %}
+
+<main class="grey">
+  {% include "includes/breadcrumbs.html" %}
+
+  <article class="article calculator-page start-page">
+    <div class="container">
+      <div class="title__link-box">
+        <h1 class="title">
+          {{title}}
+        </h1>
+      </div>
+
+      <div class="calculator-page__area">
+        <div class="calculator-page__form-box">
+          <p class="calculator-page__form-title">
+            Тип изделия
+          </p>
+          <div class="calculator-page__left">
+            <div class="calculator-page__cards">
+              <div class="active calculator-page__card">
+                <div class="calculator-page__img-box active">
+                  <img class="calculator-page__img" src="assets/img/calc1.png" alt="">
+                </div>
+                <p class="calculator-page__card-title">
+                  Труба
+                </p>
+              </div>
+              <div class="calculator-page__card">
+                <div class="calculator-page__img-box">
+                  <img class="calculator-page__img" src="assets/img/calc2.png" alt="">
+                </div>
+                <p class="calculator-page__card-title">
+                  Проволока
+                </p>
+              </div>
+              <div class="calculator-page__card">
+                <div class="calculator-page__img-box">
+                  <img class="calculator-page__img" src="assets/img/calc3.png" alt="">
+                </div>
+                <p class="calculator-page__card-title">
+                  Лента/Полоса
+                </p>
+              </div>
+            </div>
+
+            <div class="calculator-page__input-box">
+              <div class="calculator-page__select-box">
+                <select class="js-calculator" name="" id="">
+                  <option value="">Сплав/материал</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                  <option value="11">11</option>
+                  <option value="12">12</option>
+                </select>
+              </div>
+              <label class="calculator-page__label" for="input1">
+                <span class="calculator-page__label-text"> Толщина стенки</span>
+                <input type="text" id="input1" class="calculator-page__input" placeholder="0">
+                <span class="calculator-page__label-text">мм</span>
+              </label>
+              <label class="calculator-page__label" for="input2">
+                <span class="calculator-page__label-text"> Диаметр</span>
+                <input type="text" id="input1" class="calculator-page__input" placeholder="0">
+                <span class="calculator-page__label-text">мм</span>
+              </label>
+
+              <div class="calculator-page__btn-box">
+                <button class="calculator-page__btn">Рассчитать</button>
+              </div>
+            </div>
+          </div>
+
+          </form>
+        </div>
+        <div class="calculator-page__form-box">
+          <p class="calculator-page__form-title">
+            Труба
+          </p>
+          <div class="calculator-page__right">
+
+            <div class="calculator-page__right-img-box">
+              <img class="calculator-page__right-img" src="assets/img/type1.jpg" alt="">
+            </div>
+            <div class="calculator-page__right-input-box">
+              <label class="calculator-page__label" for="input1">
+                <span class="calculator-page__label-text"> Вес</span>
+                <input type="text" id="input1" class="calculator-page__input" placeholder="0">
+                <span class="calculator-page__label-text">мм</span>
+              </label>
+              <label class="calculator-page__label" for="input2">
+                <span class="calculator-page__label-text"> Длина </span>
+                <input type="text" id="input1" class="calculator-page__input" placeholder="0">
+                <span class="calculator-page__label-text">мм</span>
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+  </article>
+
+</main>
+{% endblock %}

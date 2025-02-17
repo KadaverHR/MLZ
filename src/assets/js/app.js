@@ -53,6 +53,7 @@ $(document).ready(function () {
 
   ///
   const mobileNav = document.querySelectorAll(".accordion-mob");
+  const filterMenu = document.querySelectorAll('.js-accordion');
   let i = 0;
 
   function accordion(list) {
@@ -69,10 +70,81 @@ $(document).ready(function () {
     });
   }
 
-  const filterMenu = document.querySelectorAll('.js-accordion');
-
   accordion(mobileNav);
   accordion(filterMenu);
+
+
+  ///Фильтры на мобилке 
+
+  const filterBtn = document.querySelector('.filter-mob');
+  const filterMobClose = document.querySelector('.filter-mob-close');
+
+  if (filterBtn) {
+    filterBtn.addEventListener('click', function () {
+      const filterBox = filterBtn.closest('.catalog-filter__nav')
+      const filterList = filterBox.querySelector('.catalog-filter__list')
+      filterBox.classList.add('active-mob')
+      document.body.classList.toggle('stop-scroll');
+    })
+
+    filterMobClose.addEventListener('click', function () {
+      const filterBox = filterBtn.closest('.catalog-filter__nav')
+      const filterList = filterBox.querySelector('.catalog-filter__list')
+      filterBox.classList.remove('active-mob')
+      document.body.classList.toggle('stop-scroll');
+    })
+
+  }
+
+
+
+  /// Прокрутка таблицы  
+
+  const tableContainer = document.querySelectorAll('.horizontal-scroll');
+
+
+  tableContainer.forEach((table) => {
+
+    let isDragging = false;
+    let startX, scrollLeft;
+    table.addEventListener('mousedown', (e) => {
+      isDragging = true;
+      startX = e.pageX - table.offsetLeft;
+      scrollLeft = table.scrollLeft;
+      table.style.cursor = 'grabbing'; // Меняем курсор на "рука сжата"
+    });
+
+    table.addEventListener('mousemove', (e) => {
+      if (!isDragging) return;
+      e.preventDefault();
+      const x = e.pageX - table.offsetLeft;
+      const walk = (x - startX) * 2; // Скорость прокрутки
+      table.scrollLeft = scrollLeft - walk;
+    });
+
+    // Для тач-устройств
+    table.addEventListener('touchstart', (e) => {
+      isDragging = true;
+      startX = e.touches[0].pageX - table.offsetLeft;
+      scrollLeft = table.scrollLeft;
+    });
+
+    table.addEventListener('touchend', () => {
+      isDragging = false;
+    });
+
+    table.addEventListener('touchmove', (e) => {
+      if (!isDragging) return;
+      e.preventDefault();
+      const x = e.touches[0].pageX - table.offsetLeft;
+      const walk = (x - startX) * 2; // Скорость прокрутки
+      table.scrollLeft = scrollLeft - walk;
+    });
+
+  })
+  // Для мыши
+
+
 
   //карусель 
 
@@ -199,11 +271,35 @@ $(document).ready(function () {
   }
 
 
-  // 
+  // кнопка сравнить
+
+  const chekboxForm = document.querySelector('.catalog-add-compare__table-box');
 
 
+  if (chekboxForm) {
+    const inputCheckbox = chekboxForm.querySelectorAll('input');
+    $(document).on('change', 'input[type="checkbox"]', function () {
+      let countChecked = 0;
+      inputCheckbox.forEach((item) => {
+        if (item.checked) {
+          countChecked++;
+        }
+      });
+      if (countChecked > 1) {
+        $('.btn-compare__box').addClass('active');
+      } else {
+        $('.btn-compare__box').removeClass('active');
+      }
+    });
+  }
+  /// SELECT2 
+  $('.js-calculator').select2({
+    dropdownParent: $('.calculator-page__select-box')
+  })
 
-
+  $('.vacancy__contact-select').select2({
+    dropdownParent: $('.vacancy__contact-select-box')
+  })
 
 });
 

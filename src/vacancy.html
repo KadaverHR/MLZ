@@ -1,0 +1,62 @@
+{% set title = "Вакансии" %}
+{% extends "layouts/default.html" %}
+{% block content %}
+
+
+<main class="grey">
+
+  {% include "includes/breadcrumbs.html" %}
+  <article data-aos="fade-up" data-aos-duration="800" data-aos-easing="ease-in-sine" class="article vacancy start-page">
+    <section class="about-page__banner">
+      <div class="container">
+        {% include "includes/title.html" %}
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="vacancy__area">
+        <div class="vacancy__box-left">
+          <div class="vacancy__contact-box">
+            <div class="vacancy__contact">
+              <p class="vacancy__contact-title">
+                Отдел персонала
+              </p>
+              <a href="tel:+74952910914" type="tel" class="vacancy__contact-link tel">
+                +7 (495) 291-09-14
+              </a>
+            </div>
+            <div class="vacancy__contact">
+              <p class="vacancy__contact-title">
+                Электронная почта
+              </p>
+              <a href="mailto:info@ezks-mp.ru" type="mail" class="vacancy__contact-link mail">
+                info@ezks-mp.ru
+              </a>
+            </div>
+          </div>
+          <div class="vacancy__contact-form-box">
+            <p class="vacancy__contact-title">
+              Заявка на вакансию
+            </p>
+            <form class="vacancy__contact-form" action="">
+              <div class="vacancy__contact-select-box">
+                <select name="" class="vacancy__contact-select" id="">
+                  <option value="" selected disabled>Выберите вакансию</option>
+                  <option value="">Вакансия 1</option>
+                  <option value="">Вакансия 2</option>
+                  <option value="">Вакансия 3</option>
+                </select>
+              </div>
+              <input required type="tel" name="" id="" placeholder="Введите ваш номер телефона">
+              <input required type="text" name="" id="" placeholder="Введите ваше имя">
+
+              <p class="vacancy__contact-form-text">
+                *Поля, обязательные для заполнения
+              </p>
+              <button class="vacancy__contact-form-btn" type="submit">перезвоните мне</button>
+            </form>
+          </div>
+        </div>
+  </article>
+</main>
+{% endblock %}

@@ -3,14 +3,76 @@
     display: grid
     grid-template-columns: 249px 1fr
     gap: 30px
+    align-items: start
+    margin-bottom: 40px
+    margin-top: 0
+    @media all and ($m)
+      grid-template-columns: 1fr
+  &__btn
+    display: grid
+    width: 100%
+    grid-template-columns: 30px auto
+    gap: 15px
+    padding: 10px 20px
+    border-radius: 5px
+    font-weight: 600
+    font-size: 18px
+    line-height: 133%
+    color: #0d0d0e
+    text-align: start
+    transition: color $anim, background $anim, border $anim
+    align-items: center
+    &::before
+      min-height: 50px
+      content: ""
+      display: grid
+      height: 100%
+      background-size: cover
+    &.calculator-btn
+      border: 1px solid #ea5f12
+      &::before
+        transition: background $anim
+        background: url(/assets/img/calc-o.svg) no-repeat center center
+      &:hover, &:active, &:focus
+        background: #ea5f12
+        color: #fff
+        &::before
+          background: url(/assets/img/calc-w.svg) no-repeat center center
+    &.question-btn
+      border: 1px solid #b7bbbe
+      &::before
+        background: url(/assets/img/question.png) no-repeat center center
+        background-size: cover
+    &.comparison-btn
+      background: #fff
+      border: 1px solid #fff
+      &::before
+        transition: background $anim
+        background: url(/assets/img/comparison-o.svg) no-repeat center center
+      &:hover, &:active, &:focus
+        background: #ea5f12
+        color: #fff
+        &::before
+          background: url(/assets/img/comparison-w.svg) no-repeat center center
 
 .catalog-filter
+  display: grid
+  gap: 20px
+  @media all and ($m)
+    grid-template-columns: repeat(3, 1fr)
+  @media all and ($s)
+    grid-template-columns: 1fr
+    grid-template-rows: repeat(3, 1fr)
+  &__nav
+    display: grid
   &__list
-
+    @media all and ($m)
+      display: none
   &__item
     border-radius: 0
     overflow: hidden
     background: #fff
+    transition: background $anim
     &:is(&.active)
       &:first-child
         border-radius: 5px 5px 0 0
@@ -24,9 +86,15 @@
         border-bottom: 0
         &:first-child
           border-top: 0
+        &::after
+          transform: rotate(180deg)
       &::after
         content: ""
         background: url(/assets/img/arrow-mob.svg) no-repeat center center
+        transform: rotate(180deg)
+    &:hover, &:active, &:focus
+      background: #c2c5c8
+
   &__title
     padding: 12px 20px
     font-weight: 400
@@ -45,13 +113,13 @@
     &::after
       content: ""
       background: url(/assets/img/arrow-grey.svg) no-repeat center center
-
+      transition: transform $anim
   &__nav-list
     display: grid
     padding: 10px 15px
     background: #fff
     gap: 10px
-  &__nav-link
+  &__nav-link, .catalog-content__analog-link
     font-weight: 400
     font-size: 16px
     line-height: 137%
@@ -77,5 +145,421 @@
         border-top: 2px solid rgb(234, 95, 18)
         border-right: 2px solid rgb(234, 95, 18)
 
-.catalog-content 
-  
+  &__mob-btn
+    display: none
+    width: 100%
+    border-radius: 5px
+    font-size: 16px
+    line-height: 115%
+    position: relative
+    justify-content: space-between
+    grid-template-columns: auto 13px
+    gap: 10px
+    cursor: pointer
+    padding: 12px 20px
+    background: #676e76
+    color: #fff
+    font-weight: 600
+    border-bottom: 0
+    align-items: center
+    &::after
+      content: ""
+      height: 100%
+      background: url(/assets/img/arrow-grey.svg) no-repeat center center
+      transition: transform 0.3s ease-in-out
+    @media all and ($m)
+      display: grid
+  &__mob-header
+    display: none
+    justify-content: space-between
+    grid-template-columns: auto 20px
+    align-items: center
+  &__mob-title
+    color: rgb(31, 35, 46)
+    font-size: 25px
+    font-weight: 700
+    line-height: 37px
+    text-align: left
+
+.catalog-content
+  margin-bottom: 40px
+  &__analog-title
+    padding-top: 20px
+  &__analog-box
+    border-top: 6px solid #b7bbbe
+  &__analog-list
+    display: grid
+    grid-template-columns: repeat(3,1fr)
+    padding: 20px 15px
+    background: #fff3ec
+    @media all and ($s)
+      grid-template-columns: repeat(2,1fr)
+  &__analog-link
+    font-weight: 400
+    font-size: 16px
+    line-height: 137%
+    color: #0d0d0e
+    display: grid
+    gap: 10px
+    grid-template-columns: 6px auto
+    position: relative
+    align-items: center
+    transition: font-weight $anim
+    &::before
+      content: ""
+      width: 8px
+      height: 8px
+      border-top: 1.5px solid rgb(103, 110, 118)
+      border-right: 1.5px solid rgb(103, 110, 118)
+      transform: rotate(-135deg)
+      transition: border $anim
+    &:hover, &:active, &:focus
+      font-weight: 700
+      &::before
+        color: rgb(234, 95, 18)
+        border-top: 2px solid rgb(234, 95, 18)
+        border-right: 2px solid rgb(234, 95, 18)
+
+.active-mob
+  display: grid
+  position: fixed
+  top: 0
+  left: 0
+  z-index: 99
+  padding: 20px
+  background: #fff
+  width: 100%
+  height: 100vh
+  overflow-y: auto
+  align-items: start
+  align-content: start
+  gap: 40px
+  .catalog-filter__list
+    display: grid
+  .catalog-filter__mob-btn
+    display: none
+  .catalog-filter__mob-header
+    display: grid
+
+.catalog-item
+  &__desc-box
+    display: grid
+    padding-bottom: 30px
+    border-bottom: 6px solid #b7bbbe
+  &__btn-box
+    display: grid
+    gap: 20px
+    grid-template-columns: repeat(2, 1fr)
+  &__btn-order
+    padding: 12px
+    font-weight: 600
+    font-size: 15px
+    line-height: 87%
+    text-align: center
+    color: #fff
+    background: #ea5f12
+    border: 1px solid #ea5f12
+    border-radius: 5px
+    display: grid
+    grid-template-columns: auto 18px
+    align-items: center
+    justify-content: center
+    transition: background $anim
+    &::after
+      min-height: 16px
+      display: grid
+      content: ''
+      background: url(/assets/img/click.svg) no-repeat center center
+      background-size: contain
+    &:active, &:hover, &:focus
+      background: rgb(208, 82, 12)
+  &__btn-compare
+    padding: 12px 25px
+    font-weight: 600
+    font-size: 15px
+    line-height: 87%
+    text-align: center
+    color: #1f232e
+    border: 1px solid #ea5f12
+    border-radius: 5px
+    display: grid
+    grid-template-columns: auto 18px
+    align-items: center
+    justify-content: center
+    gap: 5px
+    transition: color $anim, background $anim
+    transition: border $anim, background $anim, color $anim
+    &::after
+      min-height: 16px
+      display: grid
+      content: ''
+      background: url(/assets/img/comparison-o.svg) no-repeat center center
+      background-size: contain
+      transition: background $anim
+    &:active, &:hover, &:focus
+      background: rgb(208, 82, 12)
+      color: #fff
+      border: 1px solid rgb(208, 82, 12)
+      &::after
+        background: url(/assets/img/comparison-w.svg) no-repeat center center
+        background-size: contain
+  &__desc-list
+    padding: 20px
+    border-radius: 5px
+    border: 1px solid #b7bbbe
+    background: #fff
+    display: grid
+    gap: 15px
+  &__desc-item
+    display: grid
+    gap: 5px
+  &__desc-title
+    color: #0d0d0e
+    font-size: 16px
+    line-height: 115%
+    font-weight: 600
+    display: grid
+    grid-template-columns: 10px auto
+    gap: 5px
+    align-items: center
+    &::before
+      content: ""
+      width: 10px
+      height: 10px
+      background: #ea5f12
+      border-radius: 50%
+  &__desc-text
+    color: #0d0d0e
+    font-size: 16px
+    line-height: 115%
+    font-weight: 400
+  &__table-box
+    display: grid
+    gap: 40px
+
+.table-elements.vertical
+  caption
+    color: rgb(31, 35, 46)
+    font-size: 27px
+    font-weight: 700
+    line-height: 37px
+    text-align: left
+    margin-bottom: 20px
+  table
+    width: 100%
+    border-spacing: 0
+  thead
+    // background: #EA5F12
+    color: #fff
+    font-size: 16px
+    font-weight: 600
+    line-height: 22px
+    text-align: left
+    th
+      padding: 10px 20px
+      background: #676e76
+      text-align: center
+      border-bottom: 1px solid #b7bbbe
+      border-left: 1px solid #b7bbbe
+      &:first-child
+        border-top-left-radius: 5px
+      &:last-child
+        border-top-right-radius: 5px
+        border-left: 1px solid #b7bbbe
+      span
+        display: block
+        font-weight: 400
+        font-size: 12px
+  tbody
+    td
+      font-size: 14px
+      font-weight: 600
+      line-height: 22px
+      color: #0d0d0e
+      padding: 10px
+      background: #fff
+      text-align: center
+      border-bottom: 1px solid #b7bbbe
+      border-right: 1px solid #b7bbbe
+      &:first-child
+        border-left: 1px solid #b7bbbe
+    tr
+      &:last-child
+        td
+          &:last-child
+            border-bottom-right-radius: 5px
+        td
+          &:first-child
+            border-bottom-left-radius: 5px
+
+.table-elements.horizontal
+  table
+  caption
+    color: rgb(31, 35, 46)
+    font-size: 27px
+    font-weight: 700
+    line-height: 37px
+    text-align: left
+    margin-bottom: 20px
+  table
+    width: 100%
+    border-spacing: 0
+  thead
+    color: #fff
+    font-size: 16px
+    font-weight: 600
+    line-height: 22px
+    text-align: left
+    th
+      padding: 10px 20px
+      background: #676e76
+      text-align: center
+      border-bottom: 1px solid #b7bbbe
+      border-right: 1px solid #b7bbbe
+      &:first-child
+        border-left: 1px solid #b7bbbe
+        border-top-left-radius: 5px
+      &:last-child
+        border-top-right-radius: 5px
+
+  tbody
+    th
+      background: #676e76
+      color: #fff
+      border-bottom: 1px solid #b7bbbe
+    td
+      white-space: nowrap
+      font-size: 14px
+      font-weight: 400
+      line-height: 22px
+      color: #0d0d0e
+      background: #fff
+      padding: 10px
+      text-align: center
+      border-bottom: 1px solid #b7bbbe
+      border-right: 1px solid #b7bbbe
+      &:first-child
+        border-left: 1px solid #b7bbbe
+    tr
+      &:last-child
+        td
+          &:first-child
+            border-bottom-left-radius: 5px
+          &:last-child
+            border-bottom-right-radius: 5px
+  tfoot
+    margin-top: 10px
+    td
+
+      padding: 10px
+      color: rgb(13, 13, 14)
+      font-size: 16px
+      font-weight: 400
+      line-height: 22px
+      letter-spacing: 0%
+      text-align: left
+      strong
+        font-weight: 600
+
+.horizontal-scroll
+  overflow-x: auto
+  &::-webkit-scrollbar-thumb
+    background: rgb(234, 95, 18)
+  &::-webkit-scrollbar
+    width: 3px
+    height: 5px
+    background-color: rgb(183, 187, 190)
+
+.catalog-add-compare
+  &__box
+    display: grid
+    gap: 40px
+  &__text
+    font-weight: 400
+    font-size: 16px
+    line-height: 137%
+    color: #0d0d0e
+  &__table-list
+    display: grid
+    gap: 11px
+    grid-template-columns: repeat(3, 1fr)
+    padding: 10px 20px
+    border-radius: 5px
+    background: #fff
+  &__table-title
+    border-radius: 5px 5px 0px 0px
+    background: rgb(103, 110, 118)
+    color: #fff
+    padding: 10px 20px
+    color: rgb(255, 255, 255)
+    font-size: 16px
+    font-weight: 600
+    line-height: 22px
+
+.catalog-check
+  display: grid
+  grid-template-columns: 16px auto
+  gap: 10px
+  align-items: center
+  input
+    display: none
+  &__span
+    display: grid
+    &::before
+      content: ""
+      width: 17px
+      height: 17px
+      border: 1px solid #676e76
+      border-radius: 4px
+      background-color: #fff
+      cursor: pointer
+  &:has(input:checked)
+    .catalog-check__span
+      &::before
+        background-image: url(/assets/img/check.svg)
+        background-repeat: no-repeat
+        background-position: center center
+        border: 1px solid #fff
+        background-color: #ea5f12
+  &__table-link
+    font-weight: 400
+    font-size: 16px
+    line-height: 137%
+    color: #0d0d0e
+    &:active, &:hover, &:focus
+      text-decoration: underline
+      color: #0d0d0e
+
+.btn-compare
+  display: grid
+  align-items: center
+  justify-content: center
+  font-size: 16px
+  font-weight: 600
+  line-height: 13px
+  letter-spacing: 1px
+  text-align: center
+  border-radius: 5px
+  cursor: pointer
+  padding: 10px 20px
+  background-color: #f26c1d
+  color: #fff
+  border-color: #f26c1d
+  text-transform: uppercase
+  transition: background-color $anim
+  &:active, &:hover, &:focus
+    background-color: #ea5f12
+  &__box
+    display: none
+    justify-content: center
+    position: fixed
+    bottom: 0px
+    left: 50%
+    transform: translateX(-50%)
+    z-index: 1000
+    border-radius: 5px 5px 0px 0px
+    width: 100%
+    background: #676e76
+    padding: 15px
+    &.active 
+      display: grid
