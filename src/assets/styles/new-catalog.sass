@@ -1,0 +1,94 @@
+.catalog-filter-min
+  &__title
+    padding: 12px 20px
+    font-size: 16px
+    line-height: 115%
+    position: relative
+    display: grid
+    gap: 10px
+    color: #fff
+    font-weight: 600
+    border-bottom: 0
+    background: #676e76
+    color: #fff
+    font-weight: 600
+    border-radius: 5px 5px 0 0
+    @media all and ($m)
+      display: none
+  .catalog-filter__nav-list
+    border: 1px solid #B7BBBE
+    border-radius: 0 0 5px 5px
+    @media all and ($m)
+      border: 0
+.catalog-table
+  padding: 20px
+  border: 1px solid #b7bbbe
+  border-radius: 5px
+  display: grid
+  grid-template-columns: 232px 1fr
+  gap: 40px
+  margin-bottom: 40px
+  @media all and ($s)
+    grid-template-columns: 1fr
+    padding: 0
+    border: 0
+  &__img
+    border-radius: 4px
+    display: grid
+    @media all and ($s)
+      width: 100%
+  &__desc-list
+    display: grid
+    gap: 10px
+  &__desc-item
+    // display: flex
+    display: grid
+    grid-template-columns: repeat(2,1fr)
+    gap: 10px
+    justify-content: space-between
+    align-items: center
+    position: relative
+    @media all and ($s)
+      grid-template-columns: 1fr
+  &__desc-title
+    display: inline
+    position: relative
+    justify-self: start
+    justify-content: start
+    justify-items: start
+    font-size: 16px
+    &::before
+      content: ""
+      width: 10px
+      height: 10px
+      background: #ea5f12
+      border-radius: 50%
+      display: none
+    @media all and ($s)
+      position: relative
+      display: grid
+      grid-template-columns: 10px auto
+      gap: 5px
+      align-items: center
+      font-weight: 600
+      &::before
+        display: grid
+  &__desc-text
+    position: relative
+    font-weight: 600
+    font-size: 16px
+    &::before
+      content: ""
+      position: absolute
+      width: 100%
+      border-bottom: 1px dashed #85909d
+      height: 1px
+      bottom: -2px
+      left: 50%
+      transform: translateX(-50%)
+      opacity: 0.5
+    @media all and ($s)
+      font-weight: 400
+      &::before
+        display: none
+

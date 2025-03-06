@@ -1,4 +1,16 @@
 {
+  "catalog": {
+    "title": "Каталог продукции",
+    "item": [
+      "Проволока",
+      "Пруток / Круг",
+      "Слитки",
+      "Полоса",
+      "Лента / Фольга",
+      "Труба",
+      "Поковка"
+    ]
+  },
   "navList": [
     {
       "title": "Компания",
@@ -53,9 +65,8 @@
     "tippy",
     "slick",
     "aos",
-    "select2.min", 
+    "select2.min",
     "fancybox"
-    
   ],
   "libsJs": [
     "jquery.js",
@@ -68,7 +79,7 @@
     "jquery.maskedinput.min.js",
     "slick.min.js",
     "tippy-bundle.umd.js",
-    "select2.min.js", 
+    "select2.min.js",
     "fancybox.umd.js"
   ],
   "catalogFilter": [

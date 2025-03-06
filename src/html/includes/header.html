@@ -57,8 +57,20 @@
           <div class="catalog-mobile__navigation">
             <ul>
               {% for menu in navList %}
-              <li class="catalog-mobile__menu-link catalog-mobile__button {% if menu.item %} accordion-mob {% endif %}">
+              <li class="catalog-mobile__button {% if menu.item %} accordion-mob {% endif %}">
+
+                {% if 'item' not in menu %}
+
+                <a class="catalog-mobile__menu-link" href="http:// ">
+                  {{ menu.title }}
+
+                </a>
+
+                {% else%}
+                <p class="catalog-mobile__menu-link">
                 {{ menu.title }}
+                </p>
+                {% endif %}
 
                 {% if menu.item %}
                 <div class="panel">
